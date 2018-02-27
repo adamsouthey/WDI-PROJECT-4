@@ -16,10 +16,25 @@ class DonationsNew extends React.Component {
       postcode: '',
       telephone: '',
       category: '',
-      description: ''
+      description: '',
+      location: {
+        lat: '',
+        lng: ''
+      }
     },
     errors: {}
   };
+
+  setLatLng = (place) => {
+    console.log(place);
+    const googleData = {
+      address: place.formatted_address,
+      location: place.geometry.location.toJSON()
+    };
+
+    const donation = Object.assign({}, this.state.donation, googleData);
+    this.setState({ donation }, () => console.log(this.state.donation));
+  }
 
   handleChange = ({ target: { name, value } }) => {
     const donation = Object.assign({}, this.state.donation, { [name]: value });
@@ -51,6 +66,7 @@ class DonationsNew extends React.Component {
         handleImageUpload={this.handleImageUpload}
         donation={this.state.donation}
         errors={this.state.errors}
+        setLatLng={this.setLatLng}
       />
     );
   }

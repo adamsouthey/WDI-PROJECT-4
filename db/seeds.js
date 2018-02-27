@@ -13,7 +13,8 @@ const donationData = [{
   postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',location: {
+  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  location: {
     lat: 51.51199,
     lng: -0.09015
   }

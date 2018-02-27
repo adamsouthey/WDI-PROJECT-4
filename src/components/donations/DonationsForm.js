@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactFilestack from 'filestack-react';
 import BackButton from '../utility/BackButton';
+import GoogleAutocomplete from './GoogleAutocomplete';
 
 
-const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload, donation, errors }) => {
+const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload, donation, errors, setLatLng }) => {
   return (
     <div className="row">
+
       <div className="page-banner col-md-12">
         <BackButton history={history} />
       </div>
@@ -60,6 +62,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
           />
           {errors.address && <p className="error"><small>{errors.address}</small></p>}
         </div>
+        <GoogleAutocomplete setLatLng={setLatLng}/>
         <div className="form-group">
           <label htmlFor="city">City</label>
           <input
@@ -70,7 +73,8 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
             value={donation.city}
             onChange={handleChange}
           />
-          {errors.city && <p className="error"><small>{errors.city}</small></p>}        </div>
+          {errors.city && <p className="error"><small>{errors.city}</small></p>}
+        </div>
         <div className="form-group">
           <label htmlFor="postcode">Postcode</label>
           <input

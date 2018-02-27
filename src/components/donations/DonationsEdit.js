@@ -14,7 +14,9 @@ class DonationsEdit extends React.Component {
       postcode: '',
       telephone: '',
       category: '',
-      description: ''
+      description: '',
+      lat: '',
+      lng: ''
     },
     errors: {}
   };
@@ -24,6 +26,18 @@ class DonationsEdit extends React.Component {
       .get(`/api/donations/${this.props.match.params.id}`)
       .then(res => this.setState({ donation: res.data }))
       .catch(err => console.log(err));
+  }
+  
+  setLatLng = (place) => {
+    console.log(place);
+    const googleData = {
+      address: place.formatted_address,
+      lat: place.geometry.location.lat(),
+      lng: place.geometry.location.lng()
+    };
+
+    const donation = Object.assign({}, this.state.donation, googleData);
+    this.setState({ donation }, () => console.log(this.state.donation));
   }
 
   handleChange = ({ target: { name, value } }) => {
@@ -54,6 +68,7 @@ class DonationsEdit extends React.Component {
         handleImageUpload={this.handleImageUpload}
         donation={this.state.donation}
         errors={this.state.errors}
+        setLatLng={this.setLatLng}
       />
     );
   }

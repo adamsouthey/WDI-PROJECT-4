@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
   lastname: { type: String, required: 'Please enter your last name!' },
   username: { type: String, required: 'Please enter a username!' },
   email: { type: String, required: 'Please enter a valid email!', unique: true },
-  password: { type: String, required: 'Please enter your password!' }
+  password: { type: String, required: 'Please enter your password!' },
+  vendor: { type: Boolean, default: false }
 });
 
 userSchema.set('toJSON', {

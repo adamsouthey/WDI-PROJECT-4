@@ -11,9 +11,11 @@ const donationSchema = mongoose.Schema({
   description: { type: String, required: 'Please provide a valid description of your donation'  },
   category: { type: String, required: 'Please provide a category'  },
   location: {
-    lat: Number,
-    lng: Number
+    lat: {type: Number, required: 'Please enter a valid location' },
+    lng: { type: Number, required: true }
   }
+}, {
+  timestamps: true
 });
 
 donationSchema.set('toJSON', {
