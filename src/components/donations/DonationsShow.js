@@ -1,0 +1,53 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
+import BackButton from '../utility/BackButton';
+import Auth from '../../lib/Auth';
+
+class DonationsShow extends React.Component {
+  state = {
+    donation: {}
+  }
+
+  componentWillMount() {
+    Axios
+      .get(`/api/donations/${this.props.match.params.id}`)
+      .then(res => this.setState({ donation: res.data }))
+      .catch(err => console.log(err));
+  }
+
+  deleteDonation = () => {
+    Axios
+      .delete(`/api/donations/${this.props.match.params.id}`, { headers: { 'Authorization': `Bearer ${Auth.getToken()}` }})
+      .then(() => this.props.history.push('/'))
+      .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div className="row">
+        <div className="image-tile col-md-6">
+          <img src={this.state.donation.image} className="img-responsive" />
+        </div>
+        <div className="col-md-6">
+          <h3>{this.state.donation.organisation}</h3>
+          <h4>{this.state.donation.contactname}</h4>
+          <h4>{this.state.donation.city}</h4>
+          <h4>{this.state.donation.postcode}</h4>
+          <h4>{this.state.donation.category}</h4>
+          <em>{this.state.donation.description}</em>
+          <BackButton history={this.props.history} />
+          { Auth.isAuthenticated() && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
+            <i className="fa fa-pencil" aria-hidden="true"></i>Edit
+          </Link> }
+          {' '}
+          { Auth.isAuthenticated() && <button className="main-button" onClick={this.deleteDonation}>
+            <i className="fa fa-trash" aria-hidden="true"></i>Delete
+          </button> }
+        </div>
+      </div>
+    );
+  }
+}
+
+export default DonationsShow;
