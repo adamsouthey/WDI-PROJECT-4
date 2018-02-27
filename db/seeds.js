@@ -5,12 +5,10 @@ const { dbURI } = require('../config/environment');
 const Donation      = require('../models/donation');
 
 const donationData = [{
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
@@ -19,12 +17,10 @@ const donationData = [{
     lng: -0.09015
   }
 }, {
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
@@ -33,12 +29,10 @@ const donationData = [{
     lng: -0.09015
   }
 }, {
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
@@ -47,12 +41,10 @@ const donationData = [{
     lng: -0.09015
   }
 }, {
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
@@ -61,12 +53,10 @@ const donationData = [{
     lng: -0.09015
   }
 }, {
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
@@ -75,12 +65,10 @@ const donationData = [{
     lng: -0.09015
   }
 }, {
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf Street',
-  city: 'London',
-  postcode: 'W1 7BT',
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',

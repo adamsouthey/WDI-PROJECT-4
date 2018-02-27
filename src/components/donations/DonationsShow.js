@@ -34,10 +34,10 @@ class DonationsShow extends React.Component {
         {this.state.donation.location &&
           <GoogleMap center={this.state.donation.location}/>}
         <div className="col-md-6">
-          <h3>{this.state.donation.organisation}</h3>
+          <h3>{this.state.donation.company}</h3>
           <h4>{this.state.donation.contactname}</h4>
-          <h4>{this.state.donation.city}</h4>
-          <h4>{this.state.donation.postcode}</h4>
+          <h4>{this.state.donation.address}</h4>
+          <h4>{this.state.donation.telephone}</h4>
           <h4>{this.state.donation.category}</h4>
           <em>{this.state.donation.description}</em>
           <BackButton history={this.props.history} />

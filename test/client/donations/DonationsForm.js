@@ -12,12 +12,10 @@ describe('DonationsForm tests', () => {
   it('should render seven input fields, one image input field and one select', done => {
     const props = {
       donation: {
-        organisation: '',
+        company: '',
         contactname: '',
         image: '',
         address: '',
-        city: '',
-        postcode: '',
         telephone: '',
         category: '',
         description: ''
@@ -30,7 +28,7 @@ describe('DonationsForm tests', () => {
     //find something from template within DonationsForm
     //find class = .input, find id = hashtaginput
     //find length of amount of inputs you have
-    expect(wrapper.find('input').length).to.equal(7);
+    expect(wrapper.find('input').length).to.equal(5);
     // image file upload
     expect(wrapper.find('.image-filestack').length).to.equal(1);
     //category
@@ -45,8 +43,6 @@ describe('DonationsForm tests', () => {
         organisation: 'organisation',
         contactname: 'contactname',
         image: 'image',
-        address: 'address',
-        city: 'city',
         postcode: 'postcode',
         telephone: 'telephone',
         description: 'description',
@@ -59,8 +55,6 @@ describe('DonationsForm tests', () => {
     expect(wrapper.find({ value: 'organisation' }).length).to.equal(1);
     expect(wrapper.find({ value: 'contactname' }).length).to.equal(1);
     expect(wrapper.find({ value: 'image' }).length).to.equal(1);
-    expect(wrapper.find({ value: 'address' }).length).to.equal(1);
-    expect(wrapper.find({ value: 'city' }).length).to.equal(1);
     expect(wrapper.find({ value: 'postcode' }).length).to.equal(1);
     expect(wrapper.find({ value: 'telephone' }).length).to.equal(1);
     expect(wrapper.find({ value: 'description' }).length).to.equal(1);
@@ -74,8 +68,6 @@ describe('DonationsForm tests', () => {
         organisation: '',
         contactname: '',
         image: '',
-        address: '',
-        city: '',
         postcode: '',
         telephone: '',
         description: '',
@@ -85,8 +77,6 @@ describe('DonationsForm tests', () => {
         organisation: 'organisation is required',
         contactname: 'contactname is required',
         image: 'image is required',
-        address: 'address is required',
-        city: 'city is required',
         postcode: 'postcode is required',
         telephone: 'telephone is required',
         description: 'description is required',

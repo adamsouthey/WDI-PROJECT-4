@@ -8,12 +8,10 @@ import Auth from '../../lib/Auth';
 class DonationsNew extends React.Component {
   state = {
     donation: {
-      organisation: '',
+      company: '',
       contactname: '',
       image: '',
       address: '',
-      city: '',
-      postcode: '',
       telephone: '',
       category: '',
       description: '',

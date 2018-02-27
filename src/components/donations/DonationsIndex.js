@@ -31,7 +31,7 @@ class DonationsIndex extends React.Component {
               <div key={donation.id} className="image-tile col-md-4 col-sm-6 col-xs-12">
                 <Link to={`/donations/${donation.id}`}>
                   <img src={donation.image} className="img-responsive" />
-                  <h3>{donation.organisation}</h3>
+                  <h3>{donation.company}</h3>
                 </Link>
               </div>
             );

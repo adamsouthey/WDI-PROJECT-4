@@ -6,17 +6,17 @@ import Auth from '../../lib/Auth';
 class DonationsEdit extends React.Component {
   state = {
     donation: {
-      organisation: '',
+      company: '',
       contactname: '',
       image: '',
       address: '',
-      city: '',
-      postcode: '',
       telephone: '',
       category: '',
       description: '',
-      lat: '',
-      lng: ''
+      location: {
+        lat: '',
+        lng: ''
+      }
     },
     errors: {}
   };
@@ -27,13 +27,12 @@ class DonationsEdit extends React.Component {
       .then(res => this.setState({ donation: res.data }))
       .catch(err => console.log(err));
   }
-  
+
   setLatLng = (place) => {
     console.log(place);
     const googleData = {
       address: place.formatted_address,
-      lat: place.geometry.location.lat(),
-      lng: place.geometry.location.lng()
+      location: place.geometry.location.toJSON()
     };
 
     const donation = Object.assign({}, this.state.donation, googleData);

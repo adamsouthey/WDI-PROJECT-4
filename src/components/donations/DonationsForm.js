@@ -13,16 +13,16 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
       </div>
       <form onSubmit={handleSubmit} className="col-md-6">
         <div className="form-group">
-          <label htmlFor="organisation">Organisation</label>
+          <label htmlFor="company">Company</label>
           <input
             type="text"
             className="form-control"
-            id="organisation"
-            name="organisation"
-            value={donation.organisation}
+            id="company"
+            name="company"
+            value={donation.company}
             onChange={handleChange}
           />
-          {errors.organisation && <p className="error"><small>{errors.organisation}</small></p>}
+          {errors.company && <p className="error"><small>{errors.company}</small></p>}
         </div>
         <div className="form-group">
           <label htmlFor="contactname">Contact Name</label>
@@ -50,6 +50,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
           />
           {errors.image && <p className="error"><small>{errors.image}</small></p>}
         </div>
+        <GoogleAutocomplete setLatLng={setLatLng}/>
         <div className="form-group">
           <label htmlFor="address">Address</label>
           <input
@@ -62,33 +63,8 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
           />
           {errors.address && <p className="error"><small>{errors.address}</small></p>}
         </div>
-        <GoogleAutocomplete setLatLng={setLatLng}/>
         <div className="form-group">
-          <label htmlFor="city">City</label>
-          <input
-            type="text"
-            className="form-control"
-            id="city"
-            name="city"
-            value={donation.city}
-            onChange={handleChange}
-          />
-          {errors.city && <p className="error"><small>{errors.city}</small></p>}
-        </div>
-        <div className="form-group">
-          <label htmlFor="postcode">Postcode</label>
-          <input
-            type="text"
-            className="form-control"
-            id="postcode"
-            name="postcode"
-            value={donation.postcode}
-            onChange={handleChange}
-          />
-          {errors.postcode && <p className="error"><small>{errors.postcode}</small></p>}
-        </div>
-        <div className="form-group">
-          <label htmlFor="telephone">Contact Number</label>
+          <label htmlFor="telephone">Contact Telephone</label>
           <input
             type="text"
             className="form-control"
