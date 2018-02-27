@@ -9,7 +9,11 @@ const donationSchema = mongoose.Schema({
   postcode: { type: String, required: 'Please provide a valid postcode'  },
   telephone: { type: String, required: 'Please provide a valid telephone number'  },
   description: { type: String, required: 'Please provide a valid description of your donation'  },
-  category: { type: String, required: 'Please provide a category'  }
+  category: { type: String, required: 'Please provide a category'  },
+  location: {
+    lat: Number,
+    lng: Number
+  }
 });
 
 donationSchema.set('toJSON', {

@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import BackButton from '../utility/BackButton';
 import Auth from '../../lib/Auth';
+import GoogleMap from './GoogleMap';
 
 class DonationsShow extends React.Component {
   state = {
-    donation: {}
+    donation: {},
+    id: this.props.match.params.id
   }
 
   componentWillMount() {
@@ -29,6 +31,8 @@ class DonationsShow extends React.Component {
         <div className="image-tile col-md-6">
           <img src={this.state.donation.image} className="img-responsive" />
         </div>
+        {this.state.donation.location &&
+          <GoogleMap center={this.state.donation.location}/>}
         <div className="col-md-6">
           <h3>{this.state.donation.organisation}</h3>
           <h4>{this.state.donation.contactname}</h4>
