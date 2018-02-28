@@ -37,9 +37,9 @@ class DonationsShow extends React.Component {
           <h3> Company Name: {this.state.donation.company}</h3>
           <h4> Contact Name: {this.state.donation.contactname}</h4>
           <h4> Address: {this.state.donation.address}</h4>
-          <h4>Telephone: {this.state.donation.telephone}</h4>
+          <h4> Telephone: {this.state.donation.telephone}</h4>
           <h4> Category: {this.state.donation.category}</h4>
-          <em>Description: {this.state.donation.description}</em>
+          <em> Description: {this.state.donation.description}</em>
           <BackButton history={this.props.history} />
           { Auth.isAuthenticated() && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
             <i className="fa fa-pencil" aria-hidden="true"></i>Edit

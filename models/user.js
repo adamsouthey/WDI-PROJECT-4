@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  firstname: { type: String, required: 'Please enter your first name!' },
-  lastname: { type: String, required: 'Please enter your last name!' },
-  username: { type: String, required: 'Please enter a username!' },
-  email: { type: String, required: 'Please enter a valid email!', unique: true },
-  password: { type: String, required: 'Please enter your password!' },
-  vendor: { type: Boolean, default: false }
+  firstname: { type: String, required: 'Please enter your first name.' },
+  lastname: { type: String, required: 'Please enter your last name.' },
+  username: { type: String, required: 'Please enter a username.' },
+  email: { type: String, required: 'Please enter a valid email.', unique: true },
+  password: { type: String, required: 'Please enter your password.' },
+  type: { type: String }
 });
 
 userSchema.set('toJSON', {
@@ -28,7 +28,7 @@ userSchema
 
 userSchema.pre('validate', function checkPassword(next) {
   if(!this._passwordConfirmation || this._passwordConfirmation !== this.password) {
-    this.invalidate('passwordConfirmation', 'Passwords do not match!');
+    this.invalidate('passwordConfirmation', 'Passwords do not match.');
   }
   next();
 });

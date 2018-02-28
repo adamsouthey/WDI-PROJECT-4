@@ -48,7 +48,8 @@ class DonationsEdit extends React.Component {
 
   handleImageUpload = result => {
     const donation = Object.assign({}, this.state.donation, { image: result.filesUploaded[0].url});
-    this.setState({ donation });
+    const errors = Object.assign({}, this.state.errors, { image: ''});
+    this.setState({ donation, errors });
   }
 
   handleSubmit = (e) => {

@@ -29,12 +29,14 @@ class DonationsNew extends React.Component {
       address: place.formatted_address,
       location: place.geometry.location.toJSON()
     };
-
     const donation = Object.assign({}, this.state.donation, googleData);
-    this.setState({ donation }, () => console.log(this.state.donation));
+    const errors = Object.assign({}, this.state.errors, { location: '', address: '' });
+    this.setState({ donation, errors }, () => console.log('updated donation', this.state.donation));
   }
 
   handleChange = ({ target: { name, value } }) => {
+    console.log('Address Populated', this.state.donation.address);
+    console.log('Image Populated', this.state.donation.image);
     const donation = Object.assign({}, this.state.donation, { [name]: value });
     const errors = Object.assign({}, this.state.errors, { [name]: '' });
     this.setState({ donation, errors });
@@ -42,9 +44,10 @@ class DonationsNew extends React.Component {
 
   handleImageUpload = result => {
     const donation = Object.assign({}, this.state.donation, { image: result.filesUploaded[0].url});
-    // const errors = Object.assign({}, this.state.errors, { image: ''});
-    this.setState({ donation });
+    const errors = Object.assign({}, this.state.errors, { image: ''});
+    this.setState({ donation, errors });
   }
+
 
   handleSubmit = (e) => {
     e.preventDefault();

@@ -6,7 +6,8 @@ import Auth from '../../lib/Auth';
 
 class DonationsIndex extends React.Component {
   state = {
-    donations: []
+    donations: [],
+    currentUser: {}
   }
 
   componentWillMount() {
@@ -14,17 +15,30 @@ class DonationsIndex extends React.Component {
       .get('/api/donations')
       .then(res => this.setState({ donations: res.data }))
       .catch(err => console.log(err));
+
+    if (Auth.getPayload()) {
+      Axios
+        .get(`/api/users/${Auth.getPayload().userId}`)
+        .then(res => this.setState({ currentUser: res.data }))
+        .catch(err => console.log(err));
+    }
   }
 
   render() {
+    const type = Auth.getPayload().type;
+
     return (
       <div>
         <BackButton history={this.props.history} />
         <div className="row">
           <div className="page-banner col-md-12">
-            { Auth.isAuthenticated() && <Link to="/donations/new" className="main-button">
+            {/* { Auth.isAuthenticated() && <Link to="/donations/new" className="main-button">
+              <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
+            </Link>} */}
+            { type === 'vendor' && <Link to="/donations/new" className="main-button">
               <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
             </Link>}
+            { type === 'charity' && <p> Youre a charity therefore we are not displaying an add donation button </p>}
           </div>
           {this.state.donations.map(donation => {
             return(

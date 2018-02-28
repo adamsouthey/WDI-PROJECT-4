@@ -69,6 +69,18 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
         />
         {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
       </div>
+      <div className="form-group">
+        <select
+          name="type"
+          onChange={handleChange}
+        >
+          <option disabled selected>Please select</option>
+          <option value="charity">Charity</option>
+          <option value="vendor">Vendor</option>
+        </select>
+
+        {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
+      </div>
 
       <button className="main-button">Register</button>
     </form>

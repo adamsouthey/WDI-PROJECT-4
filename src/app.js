@@ -19,10 +19,12 @@ class App extends React.Component {
       <Router>
         <div>
           <header>
+            <div className="container">
             <h1><Link to="/donations">Uneaten Matters</Link></h1>
             <h2>Donate your unwanted <span>food</span></h2>
             <Navbar />
             <hr />
+          </div>
           </header>
           <main>
             {/* <Route path="/" component={DonationsHome} /> */}

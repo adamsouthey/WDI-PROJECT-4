@@ -5,6 +5,7 @@ import GoogleAutocomplete from './GoogleAutocomplete';
 
 
 const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload, donation, errors, setLatLng }) => {
+  // const formIsInvalid = Object.keys(errors).some(key => errors[key]);
   return (
     <div className="row">
 
@@ -50,7 +51,11 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
           />
           {errors.image && <p className="error"><small>{errors.image}</small></p>}
         </div>
+
+
         <GoogleAutocomplete setLatLng={setLatLng}/>
+
+
         <div className="form-group">
           <label htmlFor="address">Address</label>
           <input
