@@ -17,9 +17,9 @@ const Navbar = ({ history }) => {
       <Link to="/donations" className="standard-button"> Donations </Link>
       <Link to="/about" className="standard-button">About</Link>
       <Link to="/contact" className="standard-button">Contact</Link>
-      { !Auth.isAuthenticated() && <Link to="/login" className="standard-button">Login</Link>}
+      { !Auth.isAuthenticated() && <Link to="/register" className="standard-button">Register</Link> }
       {' '}
-      { !Auth.isAuthenticated() && <Link to="/register" className="standard-button">RegisterAsVendor</Link> }
+      { !Auth.isAuthenticated() && <Link to="/login" className="standard-button">Login</Link>}
       {/* { Auth.isAuthenticated() && <Link to={`/user/${Auth.getPayload().userId}`}>Profile</Link>}
       <Route path="/users/:userId" component={UserShow} /> */}
       {' '}

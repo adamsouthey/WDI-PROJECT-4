@@ -26,6 +26,8 @@ class DonationsShow extends React.Component {
   }
 
   render() {
+    const type = Auth.getPayload().type;
+
     return (
       <div className="row">
         <div className="image-tile col-md-6">
@@ -41,13 +43,15 @@ class DonationsShow extends React.Component {
           <h4> Category: {this.state.donation.category}</h4>
           <em> Description: {this.state.donation.description}</em>
           <BackButton history={this.props.history} />
-          { Auth.isAuthenticated() && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
+          { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
             <i className="fa fa-pencil" aria-hidden="true"></i>Edit
           </Link> }
+          { type === 'charity' && <p></p> }
           {' '}
-          { Auth.isAuthenticated() && <button className="main-button" onClick={this.deleteDonation}>
+          { type === 'vendor' && <button className="main-button" onClick={this.deleteDonation}>
             <i className="fa fa-trash" aria-hidden="true"></i>Delete
           </button> }
+          { type === 'charity' && <p></p> }
         </div>
       </div>
     );

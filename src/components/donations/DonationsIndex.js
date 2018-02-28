@@ -38,7 +38,7 @@ class DonationsIndex extends React.Component {
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
               <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
             </Link>}
-            { type === 'charity' && <p> Youre a charity therefore we are not displaying an add donation button </p>}
+            { type === 'charity' && <p></p>}
           </div>
           {this.state.donations.map(donation => {
             return(

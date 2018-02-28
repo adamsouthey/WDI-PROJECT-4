@@ -2,10 +2,13 @@ import React from 'react';
 import ReactFilestack from 'filestack-react';
 import BackButton from '../utility/BackButton';
 import GoogleAutocomplete from './GoogleAutocomplete';
+import Auth from '../../lib/Auth';
 
 
 const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload, donation, errors, setLatLng }) => {
   // const formIsInvalid = Object.keys(errors).some(key => errors[key]);
+  const type = Auth.getPayload().type;
+
   return (
     <div className="row">
 
