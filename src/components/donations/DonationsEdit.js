@@ -30,6 +30,7 @@ class DonationsEdit extends React.Component {
 
   setLatLng = (place) => {
     console.log(place);
+    console.log('location log', place.geometry.location.toJSON());
     const googleData = {
       address: place.formatted_address,
       location: place.geometry.location.toJSON()
@@ -41,7 +42,8 @@ class DonationsEdit extends React.Component {
 
   handleChange = ({ target: { name, value } }) => {
     const donation = Object.assign({}, this.state.donation, { [name]: value });
-    this.setState({ donation });
+    const errors = Object.assign({}, this.state.errors, { [name]: '' });
+    this.setState({ donation, errors });
   }
 
   handleImageUpload = result => {

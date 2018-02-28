@@ -13,6 +13,7 @@ const Navbar = ({ history }) => {
   return(
     <nav>
       <Link to="/" className="standard-button"> Home </Link>
+      <Link to="/donations" className="standard-button"> Donations </Link>
       <Link to="/about" className="standard-button">About</Link>
       <Link to="/contact" className="standard-button">Contact</Link>
       { !Auth.isAuthenticated() && <Link to="/login" className="standard-button">Login</Link>}

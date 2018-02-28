@@ -55,6 +55,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
           <label htmlFor="address">Address</label>
           <input
             type="text"
+            readOnly="readonly"
             className="form-control"
             id="address"
             name="address"
