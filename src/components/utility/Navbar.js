@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
 import Auth from '../../lib/Auth';
 
 const Navbar = ({ history }) => {
@@ -10,11 +9,15 @@ const Navbar = ({ history }) => {
     history.push('/');
   }
 
+  let type = null;
+
+  if (Auth.getPayload()) type = Auth.getPayload().type;
+
   return(
     <nav>
-
       <Link to="/" className="standard-button"> Home </Link>
-      <Link to="/donations" className="standard-button"> Donations </Link>
+      { type === 'vendor' && <Link to="/donations" className="standard-button"> Donations </Link> }
+      { type === 'charity' && <Link to="/donations" className="standard-button"> Donations </Link> }
       <Link to="/about" className="standard-button">About</Link>
       <Link to="/contact" className="standard-button">Contact</Link>
       { !Auth.isAuthenticated() && <Link to="/register" className="standard-button">Register</Link> }
@@ -26,6 +29,7 @@ const Navbar = ({ history }) => {
       { Auth.isAuthenticated() && <a href="#" className="standard-button" onClick={logout}>Logout</a> }
     </nav>
   );
+
 };
 
 export default withRouter(Navbar);
