@@ -26,32 +26,37 @@ class DonationsShow extends React.Component {
   }
 
   render() {
-    const type = Auth.getPayload().type;
+    // const type = Auth.getPayload().type;
+    let type = null;
+
+    if (Auth.getPayload()) type = Auth.getPayload().type;
 
     return (
-      <div className="row">
-        <div className="image-tile col-md-6">
-          <img src={this.state.donation.image} className="img-responsive" />
-        </div>
-        {this.state.donation.location &&
-          <GoogleMap center={this.state.donation.location}/>}
-        <div className="col-md-6">
-          <h3> Company Name: {this.state.donation.company}</h3>
-          <h4> Contact Name: {this.state.donation.contactname}</h4>
-          <h4> Address: {this.state.donation.address}</h4>
-          <h4> Telephone: {this.state.donation.telephone}</h4>
-          <h4> Category: {this.state.donation.category}</h4>
-          <em> Description: {this.state.donation.description}</em>
-          <BackButton history={this.props.history} />
-          { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
-            <i className="fa fa-pencil" aria-hidden="true"></i>Edit
-          </Link> }
-          { type === 'charity' && <p></p> }
-          {' '}
-          { type === 'vendor' && <button className="main-button" onClick={this.deleteDonation}>
-            <i className="fa fa-trash" aria-hidden="true"></i>Delete
-          </button> }
-          { type === 'charity' && <p></p> }
+      <div className="container">
+        <div className="row">
+          <div className="image-tile col-md-6">
+            <img src={this.state.donation.image} className="img-responsive" />
+          </div>
+          {this.state.donation.location &&
+            <GoogleMap center={this.state.donation.location}/>}
+          <div className="col-md-6">
+            <h3> Company Name: {this.state.donation.company}</h3>
+            <h4> Contact Name: {this.state.donation.contactname}</h4>
+            <h4> Address: {this.state.donation.address}</h4>
+            <h4> Telephone: {this.state.donation.telephone}</h4>
+            <h4> Category: {this.state.donation.category}</h4>
+            <em> Description: {this.state.donation.description}</em>
+            <BackButton history={this.props.history} />
+            { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
+              <i className="fa fa-pencil" aria-hidden="true"></i>Edit
+            </Link> }
+            { type === 'charity' && <p></p> }
+            {' '}
+            { type === 'vendor' && <button className="main-button" onClick={this.deleteDonation}>
+              <i className="fa fa-trash" aria-hidden="true"></i>Delete
+            </button> }
+            { type === 'charity' && <p></p> }
+          </div>
         </div>
       </div>
     );

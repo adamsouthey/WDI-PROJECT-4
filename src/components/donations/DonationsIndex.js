@@ -26,11 +26,10 @@ class DonationsIndex extends React.Component {
 
   render() {
     let type = null;
-
     if (Auth.getPayload()) type = Auth.getPayload().type;
 
     return (
-      <div>
+      <div className="container">
         <BackButton history={this.props.history} />
         <div className="row">
           <div className="page-banner col-md-12">
