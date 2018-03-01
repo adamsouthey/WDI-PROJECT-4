@@ -9,8 +9,8 @@ const donationSchema = mongoose.Schema({
   description: { type: String, required: 'Please provide a valid description of your donation.'  },
   category: { type: String, required: 'Please provide a category.'  },
   location: {
-    lat: {type: Number },
-    lng: { type: Number }
+    type: [Number], // [<lng>, <lat>]
+    index: '2dsphere'
   }
 }, {
   timestamps: true

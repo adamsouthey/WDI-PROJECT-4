@@ -13,7 +13,6 @@ class GoogleAutocomplete extends React.Component {
 
     });
   }
-
   render() {
 
     return (

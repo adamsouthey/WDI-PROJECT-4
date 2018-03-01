@@ -10,8 +10,8 @@ const userSchema = new mongoose.Schema({
   type: { type: String, required: 'Please choose between charity or vendor' },
   address: { type: String },
   location: {
-    lat: {type: Number },
-    lng: { type: Number }
+    type: [Number], // [<lng>, <lat>]
+    index: '2dsphere'
   }
 
 });

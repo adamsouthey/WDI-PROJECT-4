@@ -16,10 +16,7 @@ class Register extends React.Component {
       passwordConfirmation: '',
       type: '',
       address: '',
-      location: {
-        lat: '',
-        lng: ''
-      }
+      location: []
     },
     errors: {}
   };
@@ -28,7 +25,7 @@ class Register extends React.Component {
     console.log(place);
     const googleData = {
       address: place.formatted_address,
-      location: place.geometry.location.toJSON()
+      location: [place.geometry.location.lng(), place.geometry.location.lat()]
     };
     const user = Object.assign({}, this.state.user, googleData);
     const errors = Object.assign({}, this.state.errors, { location: '', address: '' });
@@ -50,7 +47,7 @@ class Register extends React.Component {
         Auth.setToken(res.data.token);
 
         this.state.user.type === 'charity' ?
-          this.props.history.push(`/charity/${res.data.userId}`)
+          this.props.history.push(`/user/${res.data.userId}`)
           :
           this.props.history.push('/donations');
 
@@ -68,7 +65,6 @@ class Register extends React.Component {
         handleSubmit={this.handleSubmit}
         errors={this.state.errors}
         setLatLng={this.setLatLng}
-        charityCheck={this.charityCheck}
       />
     );
   }

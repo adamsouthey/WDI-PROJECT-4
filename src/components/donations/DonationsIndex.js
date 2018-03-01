@@ -33,9 +33,6 @@ class DonationsIndex extends React.Component {
         <BackButton history={this.props.history} />
         <div className="row">
           <div className="page-banner col-md-12">
-            {/* { Auth.isAuthenticated() && <Link to="/donations/new" className="main-button">
-              <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
-            </Link>} */}
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
               <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
             </Link>}
@@ -48,6 +45,7 @@ class DonationsIndex extends React.Component {
                   <h3>{donation.company}</h3>
                 </Link>
               </div>
+
             );
           })}
         </div>

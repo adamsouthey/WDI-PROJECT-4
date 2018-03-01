@@ -1,8 +1,23 @@
 const Donation = require('../models/donation');
 
 function donationsIndex(req, res, next) {
+
+  const query = {};
+  if(req.query.lat && req.query.lng) {
+    query.location = {
+      $near: {
+        $geometry: {
+          type: 'Point',
+          coordinates: [req.query.lng, req.query.lat]
+        },
+        $minDistance: 0,
+        $maxDistance: 6000
+      }
+    };
+  }
+
   Donation
-    .find()
+    .find(query)
     .exec()
     .then(donations => res.json(donations))
     .catch(next);

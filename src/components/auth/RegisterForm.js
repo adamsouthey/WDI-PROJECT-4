@@ -2,10 +2,9 @@ import React from 'react';
 import Auth from '../../lib/Auth';
 import GoogleAutocomplete from '../donations/GoogleAutocomplete';
 
-const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng, charityCheck }) => {
+const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) => {
 
   let type = null;
-  let hiddenAddress = null;
   if (Auth.getPayload()) type = Auth.getPayload().type;
 
   return (

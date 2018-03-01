@@ -38,7 +38,7 @@ class DonationsShow extends React.Component {
             <img src={this.state.donation.image} className="img-responsive" />
           </div>
           {this.state.donation.location &&
-            <GoogleMap center={this.state.donation.location}/>}
+            <GoogleMap center={{lat: this.state.donation.location[1], lng: this.state.donation.location[0]}}/>}
           <div className="col-md-6">
             <h3> Company Name: {this.state.donation.company}</h3>
             <h4> Contact Name: {this.state.donation.contactname}</h4>

@@ -33,7 +33,7 @@ class DonationsEdit extends React.Component {
     console.log('location log', place.geometry.location.toJSON());
     const googleData = {
       address: place.formatted_address,
-      location: place.geometry.location.toJSON()
+      location: [place.geometry.location.lng(), place.geometry.location.lat()]
     };
 
     const donation = Object.assign({}, this.state.donation, googleData);

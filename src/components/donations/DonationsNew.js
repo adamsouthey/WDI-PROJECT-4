@@ -27,7 +27,7 @@ class DonationsNew extends React.Component {
     console.log(place);
     const googleData = {
       address: place.formatted_address,
-      location: place.geometry.location.toJSON()
+      location: [place.geometry.location.lng(), place.geometry.location.lat()]
     };
     const donation = Object.assign({}, this.state.donation, googleData);
     const errors = Object.assign({}, this.state.errors, { location: '', address: '' });

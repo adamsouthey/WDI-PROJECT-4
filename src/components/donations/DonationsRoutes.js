@@ -22,7 +22,7 @@ const DonationsRoutes = () => {
       <ProtectedRoute path="/donations/new" component={DonationsNew} />
       <ProtectedRoute path="/donations/:id/edit" component={DonationsEdit} />
       <Route path="/donations/:id" component={DonationsShow} />
-      <Route path="/charity/:id" component={CharityShow} />
+      <Route path="/user/:id" component={CharityShow} />
     </Switch>
   );
 };

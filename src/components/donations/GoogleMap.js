@@ -5,6 +5,7 @@ import React from 'react';
 
 class GoogleMap extends React.Component {
   componentDidMount() {
+      console.log(this.props.donations);
     this.map = new google.maps.Map(this.mapCanvas, {
       center: this.props.center || { lat: 51.51, lng: -0.09 },
       zoom: 12,
@@ -16,6 +17,19 @@ class GoogleMap extends React.Component {
       position: this.props.center || { lat: 51.51, lng: -0.09 },
       animation: google.maps.Animation.BOUNCE
     });
+    if(this.props.donations){
+      this.props.donations.forEach((donation) => {
+
+        console.log(donation);
+
+        const marker = new google.maps.Marker({
+          map: this.map,
+          position: { lat: donation.location[1], lng: donation.location[0] },
+          animation: google.maps.Animation.BOUNCE
+        });
+      });
+    }
+
   }
 
   componentWillUnmount() {
