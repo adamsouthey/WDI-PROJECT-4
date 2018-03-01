@@ -2,17 +2,20 @@ import React from 'react';
 import ReactFilestack from 'filestack-react';
 import BackButton from '../utility/BackButton';
 import GoogleAutocomplete from './GoogleAutocomplete';
+import Auth from '../../lib/Auth';
 
 
 
 const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload, donation, errors, setLatLng }) => {
   // const formIsInvalid = Object.keys(errors).some(key => errors[key]);
-
+  let type = null;
+  if (Auth.getPayload()) type = Auth.getPayload().type;
 
   return (
 
-    <div className="row">
 
+
+    <div className="row">
       <div className="page-banner col-md-12">
         <BackButton history={history} />
       </div>
@@ -58,8 +61,6 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
 
 
         <GoogleAutocomplete setLatLng={setLatLng}/>
-
-
         <div className="form-group">
           <label htmlFor="address">Address</label>
           <input

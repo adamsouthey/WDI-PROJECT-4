@@ -14,10 +14,26 @@ class Register extends React.Component {
       email: '',
       password: '',
       passwordConfirmation: '',
-      type: ''
+      type: '',
+      address: '',
+      location: {
+        lat: '',
+        lng: ''
+      }
     },
     errors: {}
   };
+
+  setLatLng = (place) => {
+    console.log(place);
+    const googleData = {
+      address: place.formatted_address,
+      location: place.geometry.location.toJSON()
+    };
+    const user = Object.assign({}, this.state.user, googleData);
+    const errors = Object.assign({}, this.state.errors, { location: '', address: '' });
+    this.setState({ user, errors }, () => console.log('updated user model', this.state.user));
+  }
 
   handleChange = ({ target: { name, value }}) => {
     const user = Object.assign({}, this.state.user, { [name]: value });
@@ -30,13 +46,19 @@ class Register extends React.Component {
     Axios
       .post('/api/register', this.state.user)
       .then(res => {
+
         Auth.setToken(res.data.token);
 
-        this.props.history.push('/');
+        this.state.user.type === 'charity' ?
+          this.props.history.push(`/charity/${res.data.userId}`)
+          :
+          this.props.history.push('/donations');
+
       })
-      // .catch(err => console.log('erroring when registering', err));
+    // .catch(err => console.log('erroring when registering', err));
       .catch(err => this.setState({ errors: err.response.data.errors }));
   }
+
 
   render() {
     return (
@@ -45,6 +67,8 @@ class Register extends React.Component {
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         errors={this.state.errors}
+        setLatLng={this.setLatLng}
+        charityCheck={this.charityCheck}
       />
     );
   }

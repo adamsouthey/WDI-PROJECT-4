@@ -1,6 +1,13 @@
 import React from 'react';
+import Auth from '../../lib/Auth';
+import GoogleAutocomplete from '../donations/GoogleAutocomplete';
 
-const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
+const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng, charityCheck }) => {
+
+  let type = null;
+  let hiddenAddress = null;
+  if (Auth.getPayload()) type = Auth.getPayload().type;
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -69,18 +76,40 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors }) => {
         />
         {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
       </div>
+
+
       <div className="form-group">
         <select
           name="type"
           onChange={handleChange}
+          value={user.type}
         >
-          <option disabled selected>Please select</option>
+          <option disabled value="">Please select</option>
           <option value="charity">Charity</option>
           <option value="vendor">Vendor</option>
         </select>
-
-        {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
       </div>
+      {errors.type && <small>{errors.type}</small>}
+
+      {user.type === 'charity' && [
+        <GoogleAutocomplete setLatLng={setLatLng} key={1}/>,
+        <div className="hiddenAddress" key={2}>
+          <div className="form-group">
+            <label htmlFor="address">Address</label>
+            <input
+              type="text"
+              readOnly="readonly"
+              className="form-control"
+              id="address"
+              name="address"
+              value={user.address}
+              onChange={handleChange}
+            />
+            {errors.address && <p className="error"><small>{errors.address}</small></p>}
+          </div>
+        </div>
+      ]}
+
 
       <button className="main-button">Register</button>
     </form>

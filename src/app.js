@@ -27,7 +27,6 @@ class App extends React.Component {
             </div>
           </header>
           <main>
-            {/* <Route path="/" component={DonationsHome} /> */}
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <DonationsRoutes />

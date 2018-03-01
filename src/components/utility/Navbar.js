@@ -10,7 +10,6 @@ const Navbar = ({ history }) => {
   }
 
   let type = null;
-
   if (Auth.getPayload()) type = Auth.getPayload().type;
 
   return(

@@ -7,7 +7,13 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: 'Please enter a username.' },
   email: { type: String, required: 'Please enter a valid email.', unique: true },
   password: { type: String, required: 'Please enter your password.' },
-  type: { type: String }
+  type: { type: String, required: 'Please choose between charity or vendor' },
+  address: { type: String },
+  location: {
+    lat: {type: Number },
+    lng: { type: Number }
+  }
+
 });
 
 userSchema.set('toJSON', {

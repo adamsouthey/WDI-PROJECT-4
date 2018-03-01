@@ -38,7 +38,7 @@ function donationsUpdate(req, res, next) {
     .exec()
     .then((donation) => {
       if(!donation) return res.notFound();
-      donation = Object.assign(donation, req.body);
+      donation = Object.assign(donation, req.body, { new: true, runValidators: true });
       return donation.save();
     })
     .then(donation => res.json(donation))

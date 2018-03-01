@@ -10,6 +10,7 @@ import DonationsIndex from './DonationsIndex';
 import DonationsShow from  './DonationsShow';
 import DonationsNew from './DonationsNew';
 import DonationsEdit from './DonationsEdit';
+import CharityShow from './CharityShow';
 
 const DonationsRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const DonationsRoutes = () => {
       <ProtectedRoute path="/donations/new" component={DonationsNew} />
       <ProtectedRoute path="/donations/:id/edit" component={DonationsEdit} />
       <Route path="/donations/:id" component={DonationsShow} />
+      <Route path="/charity/:id" component={CharityShow} />
     </Switch>
   );
 };
