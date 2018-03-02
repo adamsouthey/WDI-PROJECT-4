@@ -12,7 +12,6 @@ class DonationsContact extends React.Component {
         <div className="container vertical-divider">
           <div className="column two-thirds">
             <h3>Our Mission</h3>
-            <hr />
           </div>
         </div>
         <div className="container vertical-divider">

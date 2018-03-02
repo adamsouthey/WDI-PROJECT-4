@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: 'Please enter a valid email', unique: true },
   password: { type: String, required: 'Please enter your password' },
   type: { type: String, required: 'Please choose between charity or vendor' },
-  address: { type: String, required: 'Please enter an address by typing a location'  },
+  address: { type: String},
   location: {
     type: [Number], // [<lng>, <lat>]
     index: '2dsphere'

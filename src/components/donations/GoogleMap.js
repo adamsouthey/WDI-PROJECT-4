@@ -21,12 +21,16 @@ class GoogleMap extends React.Component {
     if(this.props.donations){
       this.props.donations.forEach((donation) => {
 
-        console.log(donation);
+        console.log('in here', donation);
+
+
 
         const marker = new google.maps.Marker({
           map: this.map,
           position: { lat: donation.location[1], lng: donation.location[0] },
-          animation: google.maps.Animation.BOUNCE
+          animation: google.maps.Animation.BOUNCE,
+          // infoWindow: this.props.donations.address
+
         });
       });
     }

@@ -3,7 +3,7 @@ import React from 'react';
 const LoginForm = ({ handleChange, handleSubmit, user, errors }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form-group">Email
+      <div className="form-group">
         <input
           type="text"
           name="email"
@@ -14,7 +14,7 @@ const LoginForm = ({ handleChange, handleSubmit, user, errors }) => {
         />
 
       </div>
-      <div className="form-group"> Password
+      <div className="form-group">
         <input
           type="password"
           name="password"

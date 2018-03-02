@@ -87,9 +87,8 @@ h2 {
   span {
     font-size: 22px;
     font-weight: bold;
-    color:#f26522;
+    color:#52D017;
     letter-spacing: 20px;
-
   }
 }
 h4{
@@ -141,8 +140,9 @@ hr {
 
 button, .main-button, .standard-button {
   margin-bottom: 20px;
+  color: white;
   padding: 5px 10px;
-    color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   border-radius: 2px;
   font-weight: 600;
   font-size: 18px;
@@ -151,6 +151,7 @@ button, .main-button, .standard-button {
   font-family: proxima-nova, monospace;
 text-align: center;
 margin: 0 auto;
+
 
   i {
     margin-right: 5px;
@@ -168,22 +169,22 @@ margin: 0 auto;
 }
 
 .main-button {
-  background: #f26522;
-  border: 1px solid lighten(#f26522, 10%);
+  background: #52D017;
+
 
   &:hover, &:focus {
     color: white;
-    background: darken(#f26522, 10%);
+    background: darken(#52D017, 10%);
   }
 }
 
 .save-button {
   background: #378B2E;
-  border: 1px solid lighten(#f26522, 10%);
+  border: 1px solid lighten(#52D017, 10%);
 
   &:hover, &:focus {
     color: white;
-    background: darken(#f26522, 10%);
+    background: darken(#52D017, 10%);
   }
 }
 
@@ -192,7 +193,7 @@ i {
 }
 
 main {
-  padding-top: 50px;
+
 }
 
 @media screen and (max-width: 750px) {
@@ -536,7 +537,7 @@ input {
 }
 
 /* Very simple grid for example */
-.container { position: relative; width: 1000px; margin: 10px auto; padding: 0; }
+.container { position: relative; width: 1100px; margin: 10px auto; padding: 0; }
 
 .container .column, .container .columns { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
 
@@ -555,6 +556,9 @@ $color : #f26522;
 
 .portfolio-experiment {
   margin-top: 20px;
+  // text-transform: uppercase;
+  // float: right;
+
 
 
   a {
@@ -569,12 +573,13 @@ $color : #f26522;
     letter-spacing: 0.07em;
 
     .text {
-      padding: 0 0.3em;
-      font-family: proxima-nova, monospace;
-      transform: translate3d(0,$pad,0);
+      padding: 1 0.2em;
+      // font-family: proxima-nova, monospace;
+      font-family: 'Righteous', cursive;
+      transform: translate3d(1,$pad,0);
       display: block;
       margin: 0 auto;
-      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+      transition: transform 0.1s cubic-bezier(2,0,0,1) 0.4s;
     }
 
     &:after {
@@ -583,8 +588,8 @@ $color : #f26522;
       bottom: -$thick;
       left: $extra;
       right: $extra;
-      // height: $thick;
-      background: $color;
+
+      background: #52D017;
       // z-index: -1;
       transition:
         transform 0.8s cubic-bezier(0.5,0,.1,1) 0.9s,
@@ -597,7 +602,7 @@ $color : #f26522;
 
   .line {
     position: absolute;
-    background: $color;
+    background: #52D017;
 
 
     &.-right,
@@ -614,7 +619,7 @@ $color : #f26522;
       height: $thick;
       left: -$thick;
       right: -$thick;
-      transform: scale3d(0,1,1);
+      transform: scale3d(0,2,10);
     }
 
     &.-right {
