@@ -40,24 +40,9 @@ class CharityShow extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          { type === 'charity' && <h5>CHARITY SHOW PAGE</h5>, <br />, <p>Displaying Your Current Location and Food Vendors nearby with food available for pickup</p> }
+          { type === 'charity' && <h5>CHARITY SHOW PAGE</h5>, <br />, <p>Displaying Charity User Current Location and Food Vendors nearby with food available for pickup</p> }
           {this.state.user.location && this.state.donations.length &&
           <GoogleMap center={{lat: this.state.user.location[1], lng: this.state.user.location[0]}} donations={this.state.donations}/>}
-
-
-          {/* {this.state.donations.location &&
-            <GoogleMap center={{lat: this.state.donations.location[1], lng: this.state.donations.location[0]}}/>} */}
-
-
-          {/* {this.state.donations.map(donation => {
-            return(
-              <div key={donation.location} className="image-tile col-md-4 col-sm-6 col-xs-12">
-                <GoogleMap center={{lat: this.state.donations.location[1], lng: this.state.donations.location[0]}}>
-                </GoogleMap>
-              </div>
-
-            );
-          })} */}
 
 
           <div className="col-md-6">

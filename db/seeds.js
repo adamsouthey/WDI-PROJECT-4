@@ -12,7 +12,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [-0.076132, 51.508530]
+  location: [-0.141099, 51.575419]
 }, {
   company: 'Waitrose',
   contactname: 'Jon Snow',
@@ -21,7 +21,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [-0.4796, 51.5485]
+  location: [-0.141012199, 51.535419]
 }, {
   company: 'Waitrose',
   contactname: 'Jon Snow',
@@ -30,7 +30,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [-0.5439, 51.4952]
+  location: [-0.14341312099, 51.525419]
 }, {
   company: 'Waitrose',
   contactname: 'Jon Snow',
@@ -39,7 +39,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [0.1439, 51.4952]
+  location: [-0.14102121399, 51.51225419]
 }, {
   company: 'Waitrose',
   contactname: 'Jon Snow',
@@ -48,7 +48,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [-0.79015, 51.51199]
+  location: [-0.141031199, 51.51335419]
 }, {
   company: 'Waitrose',
   contactname: 'Jon Snow',
@@ -57,7 +57,7 @@ const donationData = [{
   telephone: '07741098483',
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
-  location: [-0.141099, 51.515419]
+  location: [-0.14121231099, 51.51545519]
 }];
 
 mongoose.connect(dbURI, { useMongoClient: true })

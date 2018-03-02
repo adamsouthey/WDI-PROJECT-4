@@ -46,6 +46,7 @@ class DonationsShow extends React.Component {
             <h4> Telephone: {this.state.donation.telephone}</h4>
             <h4> Category: {this.state.donation.category}</h4>
             <em> Description: {this.state.donation.description}</em>
+            <em> timestamp: {this.state.donation.timestamp}</em>
             <BackButton history={this.props.history} />
             { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
               <i className="fa fa-pencil" aria-hidden="true"></i>Edit
