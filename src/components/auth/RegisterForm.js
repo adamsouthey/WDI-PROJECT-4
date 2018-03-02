@@ -87,9 +87,9 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
           <option value="charity">Charity</option>
           <option value="vendor">Vendor</option>
         </select>
-      </div>
-      {errors.type && <small>{errors.type}</small>}
 
+        {errors.type && <p className="error"><small>{errors.type}</small></p>}
+      </div>
       {user.type === 'charity' && [
         <GoogleAutocomplete setLatLng={setLatLng} key={1}/>,
         <div className="hiddenAddress" key={2}>
