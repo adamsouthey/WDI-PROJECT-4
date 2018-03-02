@@ -48,7 +48,7 @@ class DonationsShow extends React.Component {
             <em> Description: {this.state.donation.description}</em>
             <em> timestamp: {this.state.donation.timestamp}</em>
             <BackButton history={this.props.history} />
-            { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="standard-button">
+            { type === 'vendor' && <Link to={`/donations/${this.state.donation.id}/edit`} className="main-button">
               <i className="fa fa-pencil" aria-hidden="true"></i>Edit
             </Link> }
             { type === 'charity' && <p></p> }

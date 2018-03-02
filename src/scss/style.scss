@@ -140,23 +140,29 @@ hr {
 
 button, .main-button, .standard-button {
   margin-bottom: 20px;
+
   color: white;
   padding: 5px 10px;
   color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   border-radius: 2px;
   font-weight: 600;
+
   font-size: 18px;
   outline: none;
   margin: 10px;
   font-family: proxima-nova, monospace;
-text-align: center;
-margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 
 
   i {
     margin-right: 5px;
   }
 }
+// .image-filestack{
+//   width: 100%;
+// }
+
 
 .standard-button {
   background: white;
@@ -450,7 +456,7 @@ input {
   margin-top: 5px;
   padding-bottom: 5px;
   font-size: 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.4);
+
   text-align: center;
 }
 
@@ -556,9 +562,9 @@ $color : #f26522;
 
 .portfolio-experiment {
   margin-top: 20px;
+  
   // text-transform: uppercase;
   // float: right;
-
 
 
   a {

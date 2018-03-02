@@ -11,7 +11,7 @@ function donationsIndex(req, res, next) {
           coordinates: [req.query.lng, req.query.lat]
         },
         $minDistance: 0,
-        $maxDistance: 3000
+        $maxDistance: 30
       }
     };
   }
