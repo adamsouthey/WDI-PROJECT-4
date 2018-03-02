@@ -79,7 +79,7 @@ h1 {
 
 h2 {
   margin: -18px 0 0 10px;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 10px;
     color:black;
 
@@ -101,6 +101,16 @@ hr {
   height: 2px;
   background: #333;
   background-image: linear-gradient(to right, #fafafa, #eee, #fafafa);
+}
+
+.form-group{
+  margin: 0 auto;
+  width:40%;
+  font-family: proxima-nova, monospace;
+}
+
+.form-control{
+  font-family: proxima-nova, monospace;
 }
 
 .fa-cutlery {
@@ -137,7 +147,10 @@ button, .main-button, .standard-button {
   font-weight: 600;
   font-size: 18px;
   outline: none;
-  display: inline-block;
+  margin: 10px;
+  font-family: proxima-nova, monospace;
+text-align: center;
+margin: 0 auto;
 
   i {
     margin-right: 5px;
@@ -145,32 +158,32 @@ button, .main-button, .standard-button {
 }
 
 .standard-button {
-  background: #ccc;
+  background: white;
   border: 1px solid lighten(#ccc, 10%);
 
   &:hover, &:focus {
-    color: #fff;
+    color: white;
     background: darken(#ccc, 10%);
   }
 }
 
 .main-button {
-  background: #F31812;
-  border: 1px solid lighten(#F31812, 10%);
+  background: #f26522;
+  border: 1px solid lighten(#f26522, 10%);
 
   &:hover, &:focus {
-    color: #fff;
-    background: darken(#F31812, 10%);
+    color: white;
+    background: darken(#f26522, 10%);
   }
 }
 
 .save-button {
   background: #378B2E;
-  border: 1px solid lighten(#378B2E, 10%);
+  border: 1px solid lighten(#f26522, 10%);
 
   &:hover, &:focus {
-    color: #fff;
-    background: darken(#378B2E, 10%);
+    color: white;
+    background: darken(#f26522, 10%);
   }
 }
 
@@ -252,6 +265,8 @@ $diffRatio: ($contW - $imgW) / $contW;
   height: 100%;
   transition: transform $switchAT ease-in-out;
   padding: 50px 30px 0;
+
+
 }
 
 .sub-cont {
@@ -520,7 +535,7 @@ input {
 }
 
 /* Very simple grid for example */
-.container { position: relative; width: 960px; margin: 20px auto; padding: 0; }
+.container { position: relative; width: 1000px; margin: 10px auto; padding: 0; }
 
 .container .column, .container .columns { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
 
@@ -538,10 +553,11 @@ $color : #f26522;
 
 
 .portfolio-experiment {
-  background: #2d2d2d;
+  background: #red;
 
   a {
-    color: white;
+    color: black;
+    margin-top: 10px;
 
     display: inline-block;
     border: $thick solid transparent;
@@ -555,6 +571,7 @@ $color : #f26522;
       font-family: proxima-nova, monospace;
       transform: translate3d(0,$pad,0);
       display: block;
+      margin: 0 auto;
       transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
     }
 
@@ -568,8 +585,8 @@ $color : #f26522;
       background: $color;
       // z-index: -1;
       transition:
-        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
-        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        transform 0.8s cubic-bezier(0.5,0,.1,1) 0.9s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.9s,
         left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
         transform-origin: left;
     }
@@ -580,12 +597,14 @@ $color : #f26522;
     position: absolute;
     background: $color;
 
+
     &.-right,
     &.-left {
       width: $thick;
       bottom: -$thick;
       top: -$thick;
-      transform: scale3d(1,0,1);
+      transform: scale3d(0,0,0.1);
+
     }
 
     &.-top,
@@ -643,9 +662,11 @@ $color : #f26522;
     .line {
       transform: scale3d(1,1,1);
 
+
       &.-right {
         transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
         transform-origin: bottom;
+
       }
 
       &.-top {

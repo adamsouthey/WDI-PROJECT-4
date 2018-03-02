@@ -11,7 +11,7 @@ function donationsIndex(req, res, next) {
           coordinates: [req.query.lng, req.query.lat]
         },
         $minDistance: 0,
-        $maxDistance: 10000
+        $maxDistance: 3000
       }
     };
   }
@@ -53,8 +53,8 @@ function donationsUpdate(req, res, next) {
     .exec()
     .then((donation) => {
       if(!donation) return res.notFound();
-      donation = Object.assign(donation, req.body, { new: true, runValidators: true });
-      return donation.save();
+      donation = Object.assign(donation, req.body);
+      return donation.save({ new: true, runValidators: true });
     })
     .then(donation => res.json(donation))
     .catch(next);

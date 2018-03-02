@@ -33,10 +33,6 @@ const Navbar = ({ history }) => {
     //
     // </nav>
 
-
-
-
-
     <section className="portfolio-experiment">
       <a>
         <Link to='/' className="text">Home</Link>
@@ -101,6 +97,10 @@ const Navbar = ({ history }) => {
 
       <a>
         { Auth.isAuthenticated() && <a href="#" className="text" onClick={logout}>Logout</a> }
+        <span className="line -right"></span>
+        <span className="line -top"></span>
+        <span className="line -left"></span>
+        <span className="line -bottom"></span>
       </a>
 
 

@@ -26,7 +26,7 @@ class DonationsShow extends React.Component {
   }
 
   render() {
-    // const type = Auth.getPayload().type;
+
     let type = null;
 
     if (Auth.getPayload()) type = Auth.getPayload().type;

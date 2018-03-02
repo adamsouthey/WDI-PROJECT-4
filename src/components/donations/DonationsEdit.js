@@ -58,7 +58,7 @@ class DonationsEdit extends React.Component {
     Axios
       .put(`/api/donations/${this.props.match.params.id}`, this.state.donation, { headers: { 'Authorization': `Bearer ${Auth.getToken()}` } })
       .then(res => this.props.history.push(`/donations/${res.data.id}`))
-      .catch(err => console.log('ERRORING HERE', err));
+      .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 
   render() {
