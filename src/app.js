@@ -20,7 +20,7 @@ class App extends React.Component {
         <div>
           <header>
             <div className="container">
-              <h1><Link to="/">Uneaten Matters</Link></h1>
+              <h1><Link to="/">Uneaten Matters&copy;</Link></h1>
               <h2>Donate your unwanted <span>food</span></h2>
               <Navbar />
               <hr />

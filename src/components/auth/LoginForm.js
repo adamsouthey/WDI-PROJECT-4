@@ -34,7 +34,7 @@ const LoginForm = ({ handleChange, handleSubmit, user, errors }) => {
       </form>
       <br />
       <div className="signUpLoginMessage">
-      <p className="form-group"> New to Uneaten Matters? <span><Link to="/register">Register Here</Link></span> </p>
+      <p className="form-group"> New to Uneaten Matters&copy;? <span><Link to="/register"><strong>Register Here</strong></Link></span> </p>
     </div>
     </div>
 
