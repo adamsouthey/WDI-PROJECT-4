@@ -5,7 +5,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   background: #fff;
   color: black;
 }
@@ -78,9 +78,9 @@ margin-top: -20px;
 }
 
 h2 {
-  margin: -18px 0 0 10px;
+  margin: -18px 0 0 6px;
   font-size: 14px;
-  letter-spacing: 10px;
+  letter-spacing: 12px;
     color:black;
 
 
@@ -101,15 +101,35 @@ hr {
   background: #333;
   background-image: linear-gradient(to right, #fafafa, #eee, #fafafa);
 }
+.signUpLoginMessage{
+  text-align: center;
+}
 
 .form-group{
   margin: 0 auto;
-  width:35%;
-  font-family: proxima-nova, monospace;
+  width:25%;
+
+    font-size: 14px;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+  & p.form-group{
+      text-align: center;
+  }
+
+& a{
+  font-size: 14px;
+    text-align: center;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
 }
 
 .form-control{
   font-family: proxima-nova, monospace;
+  margin-top: 22px;
+}
+
+select.form-control{
+    text-align: center;
 }
 
 .fa-cutlery {
@@ -144,9 +164,9 @@ button, .main-button, .standard-button {
   color: white;
   padding: 5px 10px;
   color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 600;
-
+  width: 10%;
   font-size: 18px;
   outline: none;
   margin: 10px;
@@ -210,11 +230,14 @@ main {
 
 //Error Messages
 small{
-  color: red;
-  font-weight: 500;
-  font-size: 14px;
+color: #E42217;
+font-weight: bold;
+font-size: 14px;
+position: absolute;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
 
 }
+
 
 
 // Registration, Login Forms
@@ -562,27 +585,24 @@ $color : #f26522;
 
 .portfolio-experiment {
   margin-top: 20px;
-  
-  // text-transform: uppercase;
-  // float: right;
+  font-size: 10px;
+
 
 
   a {
     color: black;
-    font-size: 20px;
-
+    font-size: 18px;
     display: inline-block;
     border: $thick solid transparent;
     position: relative;
-
     cursor: pointer;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.20em;
 
     .text {
-      padding: 1 0.2em;
+      padding: 1 1.2em;
       // font-family: proxima-nova, monospace;
       font-family: 'Righteous', cursive;
-      transform: translate3d(1,$pad,0);
+      transform: translate3d(1,$pad,1);
       display: block;
       margin: 0 auto;
       transition: transform 0.1s cubic-bezier(2,0,0,1) 0.4s;
@@ -604,6 +624,10 @@ $color : #f26522;
         transform-origin: left;
     }
 
+  }
+
+  .navBarFloatRight{
+    float: right;
   }
 
   .line {

@@ -25,7 +25,7 @@ const Navbar = ({ history }) => {
         <span className="line -bottom"></span>
       </a>
       <a>
-        <Link to='/about' className="text">About</Link>
+        <Link to='/about' className="text">About Us</Link>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
@@ -64,7 +64,7 @@ const Navbar = ({ history }) => {
 
 
 
-
+<div className="navBarFloatRight">
       <a>
         { !Auth.isAuthenticated() && <Link to="/register" className="text">Register</Link> }
         <span className="line -right"></span>
@@ -88,6 +88,7 @@ const Navbar = ({ history }) => {
         <span className="line -left"></span>
         <span className="line -bottom"></span>
       </a>
+</div>
 
 
     </section>
