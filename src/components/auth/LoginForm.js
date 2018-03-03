@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -34,8 +34,8 @@ const LoginForm = ({ handleChange, handleSubmit, user, errors }) => {
       </form>
       <br />
       <div className="signUpLoginMessage">
-      <p className="form-group"> New to Uneaten Matters&copy;? <span><Link to="/register"><strong>Register Here</strong></Link></span> </p>
-    </div>
+        <p className="form-group"> New to Uneaten Matters? <span><Link to="/register"><strong>Register Here</strong></Link></span> </p>
+      </div>
     </div>
 
   );

@@ -25,7 +25,7 @@ const Navbar = ({ history }) => {
         <span className="line -bottom"></span>
       </a>
       <a>
-        <Link to='/about' className="text">About Us</Link>
+        <Link to='/about' className="text">About</Link>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
