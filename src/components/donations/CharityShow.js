@@ -43,13 +43,14 @@ class CharityShow extends React.Component {
           { type === 'charity' && <h5>CHARITY SHOW PAGE</h5>, <br />, <p>Displaying Charity User Current Location and Food Vendors nearby with food available for pickup</p> }
 
 
-          <div className="col-md-6">
-            <h4><strong> Profile</strong></h4>
+          <div className="col-md-6 charityShowProfile">
+            <h4><strong> User Profile</strong></h4>
             <h4> {this.state.user.firstname}</h4>
             <h4> {this.state.user.lastname}</h4>
             <h4> {this.state.user.username}</h4>
             <h4> {this.state.user.email}</h4>
             <h4> {this.state.user.address}</h4>
+            <hr />
             <BackButton history={this.props.history} />
           </div>
 
