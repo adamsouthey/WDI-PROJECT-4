@@ -135,6 +135,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
         <div className="col-md-4 imagePreview">
           { donation.image && <div>
             <h2>Image Preview</h2>
+            <br />
             <img src={donation.image} className="img-responsive" />
           </div> }
         </div>
