@@ -31,18 +31,25 @@ class DonationsIndex extends React.Component {
     return (
       <div className="container">
         <BackButton history={this.props.history} />
+        <br />
         <div className="row">
           <div className="page-banner col-md-12">
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
+            <button className="main-button">
               <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
+            </button>
             </Link>}
           </div>
+          <br />
+          <hr / >
           {this.state.donations.map(donation => {
             return(
               <div key={donation.id} className="image-tile col-md-4 col-sm-6 col-xs-12">
                 <Link to={`/donations/${donation.id}`}>
                   <img src={donation.image} className="img-responsive" />
-                  <h3>{donation.company}</h3>
+                  <h4>{donation.company}</h4>
+                  <h5>{donation.contactname}</h5>
+
                 </Link>
               </div>
 

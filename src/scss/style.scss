@@ -29,8 +29,29 @@ body {
 
 .google-map {
   width: 450px;
-  height: 400px;
+  height: 300px;
+  border: solid 2px #52D017;
+  padding: 7px;
+  box-shadow: inset 0px 0px 7px #CCC;
+  text-align: center;
+  margin: 0 auto;
+}
 
+.imageShow{
+  width: 450px;
+  height: 300px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+.mapAndImageShow{
+  text-align: center;
+}
+
+.showButtons{
+  margin: 30px;
+  text-align: center;
+  font-size: 100px;
 }
 
 .stretch {
@@ -56,7 +77,6 @@ header {
 a {
   text-decoration: none;
   color: inherit;
-  // font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-family: 'Oxygen', sans-serif;
 	font-size: 80px;
 	line-height: 10px;
@@ -110,7 +130,7 @@ hr {
 
 .form-group{
   margin: 0 auto;
-  width:25%;
+  width: 40%;
 
   font-size: 14px;
   // font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -131,27 +151,17 @@ hr {
 .form-control{
 
   font-family: 'Oxygen', sans-serif;
-  margin-top: 22px;
+  margin-top: 10px;
+
 }
 
 select.form-control{
     text-align: center;
 }
 
-.fa-cutlery {
-  position: relative;
-  top: -55px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align: center;
-  font-size: 60px;
-  color: #eee;
-  background: #fff;
-  padding: 0 30px;
-}
-
 .image-tile {
   margin-bottom: 30px;
+
 
   img {
     width: 100%;
@@ -161,21 +171,23 @@ select.form-control{
     -moz-box-shadow:    inset 0 0 10px #000000;
      -webkit-box-shadow: inset 0 0 10px #000000;
      box-shadow:         inset 0 0 10px #000000;
+
+     &:hover, &:focus {
+       color: black;
+      box-shadow: 0 0 11px rgba(33,33,33,.2);
+     }
   }
 }
-
-button, .main-button, .standard-button {
+button .main-button .standard-button{
   margin-bottom: 20px;
-
   color: white;
-  padding: 5px 10px;
+  padding: 50px 10px;
   color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   border-radius: 4px;
   font-weight: 600;
-  width: 10%;
-  font-size: 18px;
+  // width: 80%;
   outline: none;
-  margin: 10px;
+  // margin: 10px;
   font-family: 'Oxygen', sans-serif;
   text-align: center;
   margin: 0 auto;
@@ -199,9 +211,27 @@ button, .main-button, .standard-button {
     background: darken(#ccc, 10%);
   }
 }
+.formAdd{
+  margin-top: -20px;
+}
+.buttonShow{
+  margin-top: 30px;
+}
 
 .main-button {
   background: #52D017;
+  margin-top: 10px;
+  color: white;
+  color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 18px;
+  outline: none;
+  margin: 10px;
+  font-family: 'Oxygen', sans-serif;
+  margin: 0 auto;
+  width: 150px;
 
 
   &:hover, &:focus {
@@ -224,9 +254,6 @@ i {
   margin-right: 5px;
 }
 
-main {
-
-}
 
 @media screen and (max-width: 750px) {
   .fa-cutlery {
@@ -327,9 +354,9 @@ $diffRatio: ($contW - $imgW) / $contW;
 button {
   display: block;
   margin: 0 auto;
-  width: $inputW;
+  // width: $inputW;
   height: $btnH;
-  border-radius: 30px;
+  border-radius: 10px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
@@ -337,7 +364,7 @@ button {
 
 .img {
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   left: 0;
   top: 0;
@@ -733,3 +760,307 @@ $color : #f26522;
 
   }
 }
+
+//TabShow
+$blue: lighten(rgb(4,159,217), 5%);
+
+.r-a-t {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 50%;
+
+	&,
+	& * {
+		box-sizing: border-box;
+	}
+
+	.add-wrapper {
+		position: absolute;
+		top: 0;
+		left: calc(100% - 35px);
+		width: 35px;
+		height: 35px;
+		background: #f9f9f9;
+		transition: background ease .3s;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 9px;
+			top: 16px;
+			width: 17px;
+			height: 3px;
+			background: #bbb;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 16px;
+			top: 9px;
+			width: 3px;
+			height: 17px;
+			background: #bbb;
+		}
+
+		&:hover {
+			background: #f3f3f3;
+		}
+	}
+
+	.tab-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 35px;
+		// background: #aaa;
+		padding-left: 15px;
+
+		&.with-add {
+			width: calc(100% - 35px);
+		}
+
+		.tab-button {
+			position: absolute;
+			// width: 115px;
+			height: 27px;
+			user-select: none;
+
+			&:hover {
+				cursor: default;
+			}
+
+			&:not(.active):hover {
+				.tab,
+				.icon.loading,
+				.icon.loading .mask {
+					background: #f3f3f3;
+				}
+
+				.shadow {
+					background: linear-gradient(to right, transparent, #f8f8f8);
+				}
+			}
+
+			&.active {
+				z-index: 999 !important;
+
+				.tab {
+					background: #fff;
+					border-width: 2px 0 0;
+					border-style: solid;
+					border-color: $blue;
+				}
+
+				.icon.loading,
+				.icon.loading .mask {
+					background: #fff;
+				}
+
+				.shadow {
+					background: linear-gradient(to right, transparent, #fff);
+				}
+			}
+		}
+
+		.tab {
+			position: absolute;
+			left: 0;
+			top: -4px;
+			width: calc(100%);
+			height: 36px;
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 4px;
+			padding: 0 30px;
+			background: #f9f9f9;
+			z-index: 0;
+			transition: background ease .3s;
+			user-select: none;
+		 }
+
+		 .text {
+			position: absolute;
+			left: 15px;
+			top: 12px;
+			z-index: 999;
+			font-size: 12px;
+			width: calc(100% - 30px);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			&.with-close {
+				width: calc(100% - 45px);
+			}
+
+			> * {
+				position: relative;
+				vertical-align: top;
+			}
+
+			.icon {
+				position: relative;
+				display: inline-block;
+				box-sizing: border-box;
+				margin-right: 8px;
+			}
+
+			.icon.loading {
+				margin-top: 2px;
+				width: 12px;
+				height: 12px;
+				border-style: solid;
+				border-width: 2px;
+				border-color: rgb(4,159,217);
+				border-radius: 50%;
+				background: #f9f9f9;
+				transform: rotateZ(30deg);
+				animation-name: IconLoading;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				transition: background ease .3s;
+
+				& .mask {
+					position: absolute;
+					left: -3px;
+					top: -3px;
+					width: 14px;
+					height: 14px;
+					background: #f9f9f9;
+					clip: rect(0px, 14px, 14px, 7px);
+					transition: background ease .3s;
+				}
+			}
+
+			.icon.warning {
+				margin-top: 2px;
+				width: 12px;
+				height: 12px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 5px;
+					width: 2px;
+					height: 8px;
+					background: red;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 10px;
+					left: 5px;
+					width: 2px;
+					height: 2px;
+					background: red;
+				}
+			}
+		}
+
+		.close {
+			position: absolute;
+			left: calc(100% - 30px);
+			top: 12px;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			transform: rotateZ(45deg);
+
+			&:hover {
+				background: #EB5528;
+
+				&::before,
+				&::after {
+					background: white;
+				}
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 3px;
+				top: 7px;
+				width: 9px;
+				height: 1px;
+				background: #888;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 7px;
+				top: 3px;
+				width: 1px;
+				height: 9px;
+				background: #888;
+			}
+		}
+	}
+
+	.panel-wrapper {
+		position: absolute;
+		top: 35px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 35px);
+		border-top: 1px solid $blue;
+		z-index: 998;
+		overflow: scroll;
+
+		.panel {
+			position: absolute;
+			display: none;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: white;
+			z-index: -1;
+
+			&.active {
+				display: block;
+				z-index: 1;
+			}
+		}
+	}
+
+	.tooltip {
+		display: none;
+		position: absolute;
+		left: 100px;
+		top: 40px;
+		z-index: 999;
+		padding: 5px 15px;
+		white-space: nowrap;
+		background-color: #fff;
+		color: #333;
+		font-size: 12px;
+		border: 1px solid #ddd;
+		border-radius: 2px;
+		box-shadow: 1px 1px 2px rgba(206,206,206,.8);
+		opacity: .95;
+	}
+}
+
+@keyframes IconLoading {
+	from {
+		transform: rotateZ(30deg);
+	}
+
+	to {
+		transform: rotateZ(390deg);
+	}
+}
+
+//maps

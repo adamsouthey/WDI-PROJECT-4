@@ -20,7 +20,10 @@ function login(req, res, next) {
       if(!user || !user.validatePassword(req.body.password)) return res.status(401).json({ message: 'Unauthorized credentials provided' });
 
       const token = jwt.sign({ userId: user.id, type: user.type}, secret, { expiresIn: '1hr' });
-      return res.json({ message: `Welcome back ${user.username}`, token, userId: user.id });
+      return res.json({ message: `Welcome back ${user.username}`, token, userId: user.id }, () => {
+          console.log(res.json);
+      });
+
     })
     .catch(next);
 }

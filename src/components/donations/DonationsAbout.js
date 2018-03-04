@@ -18,7 +18,7 @@ class DonationsAbout extends React.Component {
           </div>
           <div className="container vertical-divider">
             <div className="column two-thirds">
-              <p>Uneaten matters connects charities with local businesses and supermarkets so surplus food can be shared
+              <p>Uneaten matters connects charities with food retailers so surplus food can be shared
                 with those less fortunate, and not thrown away.
                 This could be food nearing its sell-by date in local stores, spare home-grown vegetables or unsold food.</p>
                 <br />
