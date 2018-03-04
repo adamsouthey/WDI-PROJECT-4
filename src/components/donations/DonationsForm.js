@@ -3,6 +3,7 @@ import ReactFilestack from 'filestack-react';
 import BackButton from '../utility/BackButton';
 import GoogleAutocomplete from './GoogleAutocomplete';
 import Auth from '../../lib/Auth';
+import FancyButton from './Button';
 
 
 
@@ -123,7 +124,9 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
             </div>
             {errors.category && <p className="error"><small>{errors.category}</small></p>}
             <div>
+              {/* <FancyButton className="main-button">Save</FancyButton> */}
               <button className="main-button">Save</button>
+
             </div>
 
           </form>

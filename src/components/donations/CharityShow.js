@@ -41,20 +41,24 @@ class CharityShow extends React.Component {
       <div className="container">
         <div className="row">
           { type === 'charity' && <h5>CHARITY SHOW PAGE</h5>, <br />, <p>Displaying Charity User Current Location and Food Vendors nearby with food available for pickup</p> }
-          {this.state.user.location && this.state.donations.length &&
-          <GoogleMap center={{lat: this.state.user.location[1], lng: this.state.user.location[0]}} donations={this.state.donations}/>}
 
 
           <div className="col-md-6">
-            <h3> First Name: {this.state.user.firstname}</h3>
-            <h4> Last Name: {this.state.user.lastname}</h4>
-            <h4> Username: {this.state.user.username}</h4>
-            <h4> Email: {this.state.user.email}</h4>
-            <h4> Address: {this.state.user.address}</h4>
+            <h4><strong> Profile</strong></h4>
+            <h4> {this.state.user.firstname}</h4>
+            <h4> {this.state.user.lastname}</h4>
+            <h4> {this.state.user.username}</h4>
+            <h4> {this.state.user.email}</h4>
+            <h4> {this.state.user.address}</h4>
             <BackButton history={this.props.history} />
-
-
           </div>
+
+          <div className="col-md-6">
+            {this.state.user.location && this.state.donations.length &&
+          <GoogleMap center={{lat: this.state.user.location[1], lng: this.state.user.location[0]}} donations={this.state.donations}/>}
+          </div>
+
+
         </div>
       </div>
     );

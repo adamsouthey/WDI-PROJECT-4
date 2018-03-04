@@ -30,15 +30,21 @@ class DonationsIndex extends React.Component {
 
     return (
       <div className="container">
-        <BackButton history={this.props.history} />
+        {/* <BackButton history={this.props.history} /> */}
         <br />
         <div className="row">
           <div className="page-banner col-md-12">
+            {type === 'vendor' &&   <h5> If you would like to make a donation, please click the button below and fill out the donation form.
+                If you would like to search for existing donations, please find them below. </h5> }
+            {type === 'charity' &&   <h5> Please find existing donations made by food vendors below </h5> }
+
+              <hr />
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
             <button className="main-button">
-              <i className="fa fa-plus" aria-hidden="true"></i>Add Donation
+              <i className="fa fa-plus" aria-hidden="true"></i>AddDonation
             </button>
             </Link>}
+          <br />
           </div>
           <br />
           <hr / >
