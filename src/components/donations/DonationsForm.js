@@ -19,7 +19,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
         <BackButton history={history} />
       </div> */}
       <div className="col-md-6 formAdd">
-        <form onSubmit={handleSubmit} >
+        <form className="addDonation" onSubmit={handleSubmit} >
           <div className="form-group">
             <label htmlFor="company"></label>
             <input
@@ -62,10 +62,11 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
             />
             {errors.image && <p className="error"><small>{errors.image}</small></p>}
           </div>
-          <br />
+    <br />
 
-          <GoogleAutocomplete setLatLng={setLatLng}/>
           <div className="form-group">
+            <GoogleAutocomplete  className="positionFix" setLatLng={setLatLng}/>
+
             <label htmlFor="address"></label>
             <input
               type="text"
@@ -121,10 +122,15 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
                 <option>Household items</option>
                 <option>Clothing</option>
               </select>
+              {errors.category && <p className="error errorCategory"><small>{errors.category}</small></p>}
             </div>
-            {errors.category && <p className="error"><small>{errors.category}</small></p>}
+
             <div>
               {/* <FancyButton className="main-button">Save</FancyButton> */}
+              <br />
+              <br />
+              <br />
+
               <button className="main-button">Save</button>
 
             </div>

@@ -6,7 +6,7 @@ const donationSchema = mongoose.Schema({
   image: { type: String, required: 'Please provide an image.'  },
   address: { type: String, required: 'Please provide a valid address.'  },
   telephone: { type: String, required: 'Please provide a valid telephone number.'  },
-  description: { type: String, required: 'Please provide a valid description of your donation.'  },
+  description: { type: String, required: 'Please provide a valid description.'  },
   category: { type: String, required: 'Please provide a category.'  },
   location: {
     type: [Number], // [<lng>, <lat>]

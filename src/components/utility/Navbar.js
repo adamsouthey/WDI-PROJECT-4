@@ -40,7 +40,7 @@ const Navbar = ({ history }) => {
         <span className="line -bottom"></span>
       </a>
       <a>
-        { type === 'vendor' &&  <Link to='/donations' className="text">Vendor Donations</Link> }
+        { type === 'vendor' &&  <Link to='/donations' className="text">Current Donations</Link> }
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>

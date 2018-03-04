@@ -135,12 +135,14 @@ hr {
   margin: 0 auto;
   width: 40%;
 
-  font-size: 14px;
+
+  font-size: 12px;
   // font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-family: 'Oxygen', sans-serif;
 
   & p.form-group{
       text-align: center;
+
   }
 
 & a{
@@ -153,11 +155,14 @@ hr {
 
 .form-control{
 
-  font-family: 'Oxygen', sans-serif;
-  margin-top: 20px;
-  text-align-last: center;
+    font-family: 'Oxygen', sans-serif;
+    margin-top: 16px;
+    text-align-last: center;
+    position: relative;
+    height: 32px;
 
 }
+
 
 select.form-control{
     text-align: center;
@@ -183,9 +188,9 @@ select.form-control{
   }
 }
 button .main-button .standard-button{
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: white;
-  padding: 50px 10px;
+  padding: 20px 10px;
   color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   border-radius: 4px;
   font-weight: 600;
@@ -195,7 +200,6 @@ button .main-button .standard-button{
   font-family: 'Oxygen', sans-serif;
   text-align: center;
   margin: 0 auto;
-
 
   i {
     margin-right: 5px;
@@ -208,6 +212,11 @@ button .main-button .standard-button{
 .imagePreview{
   text-align: center;
   margin: 20px;
+}
+
+.addDonation{
+  font-size: 10px;
+  position: relative;
 }
 .standard-button {
   background: white;
@@ -272,9 +281,10 @@ i {
 //Error Messages
 small{
 color: #E42217;
-font-weight: bold;
+// font-weight: bold;
 font-size: 14px;
 position: absolute;
+padding: 10px;
 // font-family: 'Raleway', Helvetica, Arial, sans-serif;
 font-family: 'Oxygen', sans-serif;
 
@@ -521,7 +531,7 @@ input {
   width: 100%;
   margin-top: 5px;
   padding-bottom: 5px;
-  font-size: 16px;
+  font-size: 18px;
 
   text-align: center;
 }
