@@ -18,7 +18,7 @@ import DonationsIndex from '../../../src/components/donations/DonationsIndex';
 
 const donationData = [{
   id: 1,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -27,7 +27,7 @@ const donationData = [{
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)'
 }, {
   id: 2,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -36,7 +36,7 @@ const donationData = [{
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)'
 }, {
   id: 3,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -45,7 +45,7 @@ const donationData = [{
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)'
 }, {
   id: 4,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -54,7 +54,7 @@ const donationData = [{
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)'
 }, {
   id: 5,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -63,7 +63,7 @@ const donationData = [{
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)'
 }, {
   id: 6,
-  organisation: 'Waitrose',
+  company: 'Waitrose',
   contactname: 'Jon Snow',
   image: 'https://media.mnn.com/assets/images/2017/09/fresh_foods.jpg.838x0_q80.jpg',
   address: '31 Wolf St',
@@ -98,7 +98,7 @@ describe('DonationsIndex tests', () => {
   it('should display donation items', done => {
     promise.then(() => {
       wrapper.update();
-      expect(wrapper.find('div.image-tile').length).to.equal(2);
+      expect(wrapper.find('div.image-tile').length).to.equal(6);
       done();
     });
   });
@@ -108,7 +108,7 @@ describe('DonationsIndex tests', () => {
     promise.then(() => {
       //manually update render function
       wrapper.update();
-      expect(wrapper.find('div.image-tile a').length).to.eq(2);
+      expect(wrapper.find('div.image-tile a').length).to.eq(6);
       expect(wrapper.find({ href: '/donations/1' }).length).to.eq(1);
       expect(wrapper.find({ href: '/donations/2' }).length).to.eq(1);
       expect(wrapper.find({ href: '/donations/3' }).length).to.eq(1);
@@ -125,7 +125,7 @@ describe('DonationsIndex tests', () => {
     window.localStorage.setItem('token', 'FAKETOKEN');
     promise.then(() => {
       wrapper.update();
-      expect(wrapper.find('a.main-button').length).to.eq(1);
+      expect(wrapper.find('button.main-button').length).to.eq(1);
       window.localStorage.removeItem('token');
       done();
     });
@@ -134,7 +134,7 @@ describe('DonationsIndex tests', () => {
   it('should not display the add food button when not logged in', done => {
     promise.then(() => {
       wrapper.update();
-      expect(wrapper.find('a.main-button').length).to.eq(0);
+      expect(wrapper.find('button.main-button').length).to.eq(0);
       done();
     });
   });

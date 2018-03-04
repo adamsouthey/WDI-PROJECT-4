@@ -40,10 +40,10 @@ describe('DonationsForm tests', () => {
 
     const props = {
       donation: {
-        organisation: 'organisation',
+        company: 'company',
         contactname: 'contactname',
         image: 'image',
-        postcode: 'postcode',
+        address: 'address',
         telephone: 'telephone',
         description: 'description',
         category: 'category'
@@ -52,10 +52,10 @@ describe('DonationsForm tests', () => {
     };
     const wrapper = shallow(<DonationsForm {...props} />);
 
-    expect(wrapper.find({ value: 'organisation' }).length).to.equal(1);
+    expect(wrapper.find({ value: 'company' }).length).to.equal(1);
     expect(wrapper.find({ value: 'contactname' }).length).to.equal(1);
     expect(wrapper.find({ value: 'image' }).length).to.equal(1);
-    expect(wrapper.find({ value: 'postcode' }).length).to.equal(1);
+    expect(wrapper.find({ value: 'address' }).length).to.equal(1);
     expect(wrapper.find({ value: 'telephone' }).length).to.equal(1);
     expect(wrapper.find({ value: 'description' }).length).to.equal(1);
     expect(wrapper.find({ value: 'category' }).length).to.equal(1);
@@ -65,19 +65,19 @@ describe('DonationsForm tests', () => {
   it('should correctly display errors', done => {
     const props = {
       donation: {
-        organisation: '',
+        company: '',
         contactname: '',
         image: '',
-        postcode: '',
+        address: '',
         telephone: '',
         description: '',
         category: ''
       },
       errors: {
-        organisation: 'organisation is required',
+        company: 'company is required',
         contactname: 'contactname is required',
         image: 'image is required',
-        postcode: 'postcode is required',
+        address: 'address is required',
         telephone: 'telephone is required',
         description: 'description is required',
         category: 'category is required'
@@ -85,7 +85,7 @@ describe('DonationsForm tests', () => {
     };
 
     const wrapper = shallow(<DonationsForm {...props} />);
-    expect(wrapper.find('.error').length).to.equal(9);
+    expect(wrapper.find('.error').length).to.equal(7);
 
     done();
   });
