@@ -25,6 +25,17 @@ body {
     // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    .stretch {
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://images.unsplash.com/photo-1485905947173-6c548e51181c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e105d1cf2fa7351ecb8c15c6948b46d7&auto=format&fit=crop&w=1674&q=800');
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.8;
+    }
 }
 
 .google-map {
@@ -52,15 +63,6 @@ body {
   margin: 30px;
   text-align: center;
   font-size: 100px;
-}
-
-.stretch {
-    width:100%;
-    height:80%;
-    opacity: 0.8;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 }
 
 header {
@@ -154,13 +156,11 @@ hr {
 }
 
 .form-control{
-
     font-family: 'Oxygen', sans-serif;
     margin-top: 18px;
     text-align-last: center;
     position: relative;
     height: 32px;
-
 }
 
 
@@ -170,6 +170,9 @@ select.form-control{
 
 .image-tile {
   margin-bottom: 30px;
+  &:nth-child(3n+1) {
+    clear: left;
+  }
 
 
   img {
@@ -185,6 +188,16 @@ select.form-control{
        color: black;
       box-shadow: 0 0 11px rgba(33,33,33,.2);
      }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .image-tile {
+    &:nth-child(3n+1) {
+      clear: none;
+    }
+    &:nth-child(even) {
+      clear: left;
+    }
   }
 }
 button .main-button .standard-button{
@@ -280,7 +293,7 @@ i {
 }
 
 //Error Messages
-small{
+p.error{
 color: #E42217;
 font-weight: bold;
 font-size: 14px;
@@ -618,18 +631,6 @@ input {
 	top: 0;
 	width: 1px;
 }
-
-/* Very simple grid for example */
-.container { position: relative; width: 1100px; margin: 10px auto; padding: 0; }
-
-.container .column, .container .columns { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
-
-.container .one-third.column { width: 300px; }
-
-.container .two-thirds.column { width: 620px; }
-
-
-
 
 $thick : 3px;
 $pad : 0.7em;

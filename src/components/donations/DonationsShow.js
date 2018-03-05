@@ -15,16 +15,20 @@ class DonationsShow extends React.Component {
 
   componentWillMount() {
     Axios
-    .get(`/api/donations/${this.props.match.params.id}`)
-    .then(res => this.setState({ donation: res.data }))
-    .catch(err => console.log(err));
+      .get(`/api/donations/${this.props.match.params.id}`)
+      .then(res => this.setState({ donation: res.data }))
+      .catch(err => console.log(err));
   }
 
   deleteDonation = () => {
     Axios
-    .delete(`/api/donations/${this.props.match.params.id}`, { headers: { 'Authorization': `Bearer ${Auth.getToken()}` }})
-    .then(() => this.props.history.push('/'))
-    .catch(err => console.log(err));
+      .delete(`/api/donations/${this.props.match.params.id}`, { headers: { 'Authorization': `Bearer ${Auth.getToken()}` }})
+      .then(() => this.props.history.push('/'))
+      .catch(err => console.log(err));
+  }
+
+  belongsToVendor = () => {
+    return this.state.donation.user && this.state.donation.user.id && this.state.donation.user.id === Auth.getPayload().userId;
   }
 
   render() {
@@ -43,32 +47,32 @@ class DonationsShow extends React.Component {
             <div className="col-md-6">
               {this.state.donation.location &&
                 <GoogleMap  center={{lat: this.state.donation.location[1], lng: this.state.donation.location[0]}}/>}
+            </div>
+
+            <div className="row">
+              <div className="col-md-6">
+                <h3>{this.state.donation.company}</h3>
+                <h4>{this.state.donation.contactname}</h4>
+                <h4>{this.state.donation.address}</h4>
+                <h4>{this.state.donation.telephone}</h4>
+                <h4>{this.state.donation.category}</h4>
+                <em>{this.state.donation.description}</em>
               </div>
 
-              <div className="row">
-                <div className="col-md-6">
-                  <h3>{this.state.donation.company}</h3>
-                  <h4>{this.state.donation.contactname}</h4>
-                  <h4>{this.state.donation.address}</h4>
-                  <h4>{this.state.donation.telephone}</h4>
-                  <h4>{this.state.donation.category}</h4>
-                  <em>{this.state.donation.description}</em>
-                </div>
-
-                <div className="col-md-6 buttonShow">
-                    <BackButton history={this.props.history} />
-                    <br />
-                  { type === 'vendor' &&  <Link to={`/donations/${this.state.donation.id}/edit`} className="main-button">
+              <div className="col-md-6 buttonShow">
+                <BackButton history={this.props.history} />
+                <br />
+                { this.belongsToVendor() &&  <Link to={`/donations/${this.state.donation.id}/edit`} className="main-button">
                   <button className="main-button">
                     <i className="fa fa-pencil" aria-hidden="true"></i>Edit
                   </button>
-                  </Link> }
-                    <br />
-                  { type === 'charity' && <p></p> }
-                  { type === 'vendor' && <button className="main-button" onClick={this.deleteDonation}>
-                    <i className="fa fa-trash" aria-hidden="true"></i>Delete
-                  </button> }
-                  { type === 'charity' && <p></p> }
+                </Link> }
+                <br />
+                { type === 'charity' && <p></p> }
+                { this.belongsToVendor() && <button className="main-button" onClick={this.deleteDonation}>
+                  <i className="fa fa-trash" aria-hidden="true"></i>Delete
+                </button> }
+                { type === 'charity' && <p></p> }
 
 
               </div>

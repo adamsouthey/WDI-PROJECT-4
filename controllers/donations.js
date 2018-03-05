@@ -24,7 +24,7 @@ function donationsIndex(req, res, next) {
 }
 
 function donationsCreate(req, res, next) {
-
+  req.body.user = req.currentUser;
   if(req.file) req.body.image = req.file.filename;
 
   Donation
@@ -36,6 +36,7 @@ function donationsCreate(req, res, next) {
 function donationsShow(req, res, next) {
   Donation
     .findById(req.params.id)
+    .populate('user')
     .exec()
     .then((donation) => {
       if(!donation) return res.notFound();

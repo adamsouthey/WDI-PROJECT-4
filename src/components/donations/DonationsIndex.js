@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
-import BackButton from '../utility/BackButton';
+// import BackButton from '../utility/BackButton';
 import Auth from '../../lib/Auth';
 
 class DonationsIndex extends React.Component {
@@ -38,13 +38,13 @@ class DonationsIndex extends React.Component {
                 If you would like to search for existing donations, please find them below. </h5> }
             {type === 'charity' &&   <h5> Please find existing donations made by food vendors below </h5> }
 
-              <hr />
+            <hr />
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
-            <button className="main-button">
-              <i className="fa fa-plus" aria-hidden="true"></i>AddDonation
-            </button>
+              <button className="main-button">
+                <i className="fa fa-plus" aria-hidden="true"></i>AddDonation
+              </button>
             </Link>}
-          <br />
+            <br />
           </div>
           <br />
           <hr / >
@@ -55,14 +55,15 @@ class DonationsIndex extends React.Component {
                   <img src={donation.image} className="img-responsive" />
                   <h4>{donation.company}</h4>
                   <h5>{donation.contactname}</h5>
-
                 </Link>
               </div>
 
             );
           })}
+
         </div>
       </div>
+
     );
   }
 }

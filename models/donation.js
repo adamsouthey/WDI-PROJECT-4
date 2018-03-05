@@ -8,6 +8,7 @@ const donationSchema = mongoose.Schema({
   telephone: { type: String, required: 'Please provide a valid telephone number.'  },
   description: { type: String, required: 'Please provide a valid description.'  },
   category: { type: String, required: 'Please provide a category.'  },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User' },
   location: {
     type: [Number], // [<lng>, <lat>]
     index: '2dsphere'
