@@ -1,6 +1,3 @@
-
-
-
 /* global google:ignore */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
@@ -21,17 +18,28 @@ class GoogleMap extends React.Component {
       map: this.map,
       position: this.props.center || { lat: 51.51, lng: -0.09 },
       icon: image
-      // animation: google.maps.Animation.BOUNCE
     });
     if(this.props.donations){
       this.props.donations.forEach((donation) => {
 
-        console.log('in here', donation.address);
+        // console.log('in here', donation.address);
         const marker = new google.maps.Marker({
           map: this.map,
           position: { lat: donation.location[1], lng: donation.location[0] },
-          animation: google.maps.Animation.BOUNCE
+          animation: google.maps.Animation.DROP,
+          icon: 'http://www.codeshare.co.uk/images/blue-pin.png'
         });
+        var infowindow =  new google.maps.InfoWindow({
+          content: donation.address
+        });
+        marker.addListener('mouseover', function() {
+          infowindow.open(this.map, this);
+        });
+        marker.addListener('mouseout', function() {
+          infowindow.close();
+        });
+
+
         marker.id = donation.id;
 
         google.maps.event.addListener(marker, 'click', () => {
