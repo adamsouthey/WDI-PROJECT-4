@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 const Navbar = ({ history }) => {
   function logout(e) {
@@ -15,80 +17,81 @@ const Navbar = ({ history }) => {
 
   return(
 
-
     <section className="portfolio-experiment">
-      <a>
-        <Link to='/' className="text">Home</Link>
+      <Link to='/'>
+        <span className="text">Home</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-      <a>
-        <Link to='/about' className="text">About</Link>
+      </Link>
+      <Link to='/about'>
+        <span className="text">About</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-
-      <a>
-        <Link to='/contact' className="text">Contact</Link>
+      </Link>
+      <Link to='/contact'>
+        <span className="text">Contact</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-      <a>
-        { type === 'vendor' &&  <Link to='/donations' className="text">Current Donations</Link> }
+      </Link>
+      {type === 'vendor' &&  <Link to='/donations'>
+        <span className="text">Current Donations</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-      <a>
-        { type === 'charity' &&  <Link to={`/user/${Auth.getPayload().userId}`} className="text"> My Location </Link>}
+      </Link>}
+      {type === 'charity' &&  <Link to={`/user/${Auth.getPayload().userId}`}>
+        <span className="text">My Location</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-      <a>
-        { type === 'charity' &&  <Link to='/donations' className="text">Vendor Donations</Link> }
+      </Link>}
+      {type === 'charity' &&  <Link to='/donations'>
+        <span className="text">Current Donations</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
         <span className="line -bottom"></span>
-      </a>
-
+      </Link>}
 
 
+      <div className="navBarFloatRight">
+        { !Auth.isAuthenticated() && <Link to="/register">
+          <span className="text">Register</span>
+          <span className="line -right"></span>
+          <span className="line -top"></span>
+          <span className="line -left"></span>
+          <span className="line -bottom"></span>
+        </Link> }
 
-<div className="navBarFloatRight">
-      <a>
-        { !Auth.isAuthenticated() && <Link to="/register" className="text">Register</Link> }
-        <span className="line -right"></span>
-        <span className="line -top"></span>
-        <span className="line -left"></span>
-        <span className="line -bottom"></span>
-      </a>
 
-      <a>
-        { !Auth.isAuthenticated() && <Link to="/login" className="text">Login</Link> }
-        <span className="line -right"></span>
-        <span className="line -top"></span>
-        <span className="line -left"></span>
-        <span className="line -bottom"></span>
-      </a>
+        { !Auth.isAuthenticated() && <Link to="/login">
+          <span className="text">Login</span>
+          <span className="line -right"></span>
+          <span className="line -top"></span>
+          <span className="line -left"></span>
+          <span className="line -bottom"></span>
+        </Link> }
 
-      <a>
-        { Auth.isAuthenticated() && <a href="#" className="text" onClick={logout}>Logout</a> }
-        <span className="line -right"></span>
-        <span className="line -top"></span>
-        <span className="line -left"></span>
-        <span className="line -bottom"></span>
-      </a>
-</div>
+
+        { Auth.isAuthenticated() && <Link to="#" onClick={logout}>
+          <span className="text">Logout</span>
+          <span className="line -right"></span>
+          <span className="line -top"></span>
+          <span className="line -left"></span>
+          <span className="line -bottom"></span>
+        </Link> }
+
+
+      </div>
+
 
 
     </section>
