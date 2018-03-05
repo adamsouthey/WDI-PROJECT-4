@@ -3,6 +3,7 @@ import Axios from 'axios';
 import BackButton from '../utility/BackButton';
 import Auth from '../../lib/Auth';
 import GoogleMap from './GoogleMap';
+import { Link } from 'react-router-dom';
 
 class CharityShow extends React.Component {
   state = {
@@ -32,6 +33,15 @@ class CharityShow extends React.Component {
       .catch(err => console.log(err));
   }
 
+  // componentDidMount(){
+  //   marker.id = donation.id;
+  //
+  //   .addListener(marker, 'click', () => {
+  //     this.props.history.push(`/donations/${marker.id}`);
+  //   });
+  // }
+
+
   render() {
     let type = null;
     if (Auth.getPayload()) type = Auth.getPayload().type;
@@ -53,10 +63,14 @@ class CharityShow extends React.Component {
           <div className="col-md-6">
             {this.state.user.location && this.state.donations.length &&
           <GoogleMap center={{lat: this.state.user.location[1], lng: this.state.user.location[0]}} donations={this.state.donations}/>}
-            <ul className="charityIcon">
+            <ul className="vendorIcon">
               { this.state.donations.map((donation, i) =>
+
                 <li key={i}>
-                  <img src="https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png"/>{ donation.address }
+                  <Link className="vendorImageClick" to={`/donations/${donation.id}`}>
+                    <img src="https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png"/>{ donation.address }<br/>
+                    <em>{donation.description}</em>
+                  </Link>
                 </li>
               )}
             </ul>

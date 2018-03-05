@@ -36,11 +36,14 @@ body {
       opacity: 0.6;
     }
 }
-.charityIcon{
+.vendorIcon{
 margin: 0 auto;
 text-align: justify;
 list-style-type: none;
 margin-left: 50px;
+& em{
+  font-size: 8px;
+}
 }
 .google-map {
   width: 450px;
@@ -262,7 +265,10 @@ button .main-button .standard-button{
 }
 .buttonShow{
   margin-top: 30px;
+}
 
+.vendorImageClick{
+  font-size: 14px;
 }
 
 .main-button {

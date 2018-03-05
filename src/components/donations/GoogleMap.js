@@ -27,7 +27,6 @@ class GoogleMap extends React.Component {
           map: this.map,
           position: { lat: donation.location[1], lng: donation.location[0] },
           animation: google.maps.Animation.DROP,
-          // icon: 'http://www.codeshare.co.uk/images/blue-pin.png'
           icon: 'https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png'
         });
         var infowindow =  new google.maps.InfoWindow({
