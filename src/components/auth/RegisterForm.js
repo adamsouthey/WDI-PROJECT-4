@@ -20,7 +20,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.firstname}
             className="form-control"
           />
-          {errors.firstname && <small>{errors.firstname}</small>}
+          {errors.firstname && <p className="error"><small>{errors.firstname}</small></p>}
         </div>
         <div className="form-group">
           <input
@@ -31,7 +31,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.lastname}
             className="form-control"
           />
-          {errors.lastname && <small>{errors.lastname}</small>}
+          {errors.lastname && <p className="error"><small>{errors.lastname}</small></p>}
         </div>
         <div className="form-group">
           <input
@@ -42,7 +42,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.username}
             className="form-control"
           />
-          {errors.username && <small>{errors.username}</small>}
+          {errors.username && <p className="error"><small>{errors.username}</small></p>}
         </div>
         <div className="form-group">
           <input
@@ -53,7 +53,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.email}
             className="form-control"
           />
-          {errors.email && <small>{errors.email}</small>}
+          {errors.email && <p className="error"><small>{errors.email}</small></p>}
         </div>
         <div className="form-group">
           <input
@@ -64,7 +64,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.password}
             className="form-control"
           />
-          {errors.password && <small>{errors.password}</small>}
+          {errors.password && <p className="error"><small>{errors.password}</small></p>}
         </div>
         <div className="form-group">
           <input
@@ -75,7 +75,7 @@ const RegisterForm = ({ handleChange, handleSubmit, user, errors, setLatLng }) =
             value={user.passwordConfirmation}
             className="form-control"
           />
-          {errors.passwordConfirmation && <small>{errors.passwordConfirmation}</small>}
+          {errors.passwordConfirmation && <p className="error"><small>{errors.passwordConfirmation}</small></p>}
         </div>
 
 

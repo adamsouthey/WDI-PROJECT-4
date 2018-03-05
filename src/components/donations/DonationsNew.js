@@ -55,7 +55,6 @@ class DonationsNew extends React.Component {
     Axios
       .post('/api/donations', this.state.donation, { headers: { 'Authorization': `Bearer ${Auth.getToken()}`} })
       .then(() => this.props.history.push('/'))
-      // .catch(err => console.log(err.response.data.errors));
       .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 
