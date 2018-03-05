@@ -33,8 +33,8 @@ const donationData = [{
   location: [-0.0644, 51.5215]
 }, {
   company: 'The Golden Hind',
-  contactname: 'Sea Gull',
-  image: 'https://images.pexels.com/photos/899235/pexels-photo-899235.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',
+  contactname: 'Foo Ying',
+  image: 'https://images.unsplash.com/photo-1513271224036-f526ad664968?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=babb0d02148de13c07a6281f90fe52da&auto=format&fit=crop&w=1650&q=80',
   address: '71a-73 Marylebone Ln, Marylebone, London W1U 2PN',
   telephone: '020 7486 3644',
   category: 'Food nearing expiration',
@@ -60,8 +60,8 @@ const donationData = [{
   location: [-0.13209, 51.51334]
 }, {
   company: 'Tommis Burger Joint',
-  contactname: 'Tommi',
-  image: 'https://images.pexels.com/photos/899235/pexels-photo-899235.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',
+  contactname: 'Tommi Tammi',
+  image: 'https://images.unsplash.com/photo-1449453791997-5c0240b106e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60c4109688f92e531eaec8ca0f3306de&auto=format&fit=crop&w=1647&q=80',
   address: ' 342 Kings Rd, Chelsea, London SW3 5UR',
   telephone: '020 7349 0691',
   category: 'Food nearing expiration',
@@ -69,7 +69,7 @@ const donationData = [{
   location: [-0.17456, 51.48534]
 }, {
   company: 'Sarastro',
-  contactname: 'Stavros',
+  contactname: 'Stavros Philanthroku',
   image: 'https://images.pexels.com/photos/5876/food-salad-healthy-vegetables.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',
   address: '126 Drury Ln, London WC2B 5SU',
   telephone: ' 020 7836 0101',
@@ -78,7 +78,7 @@ const donationData = [{
   location: [-0.11916, 51.51356]
 }, {
   company: 'Joe and the Juice',
-  contactname: 'Jo Jo',
+  contactname: 'Jo Jameson',
   image: 'https://images.pexels.com/photos/899235/pexels-photo-899235.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',
   address: '113 Cannon St, London EC4N 5AR',
   telephone: '07341018433',
@@ -103,7 +103,44 @@ const donationData = [{
   category: 'Food nearing expiration',
   description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
   location: [-0.13401, 51.51167]
+}, {
+  company: 'Franco Manca',
+  contactname: 'Gigi Franzolo',
+  image: 'https://images.unsplash.com/photo-1503767849114-976b67568b02?ixlib=rb-0.3.5&s=c9990db0eaf50beee4e5e8878de6d34d&auto=format&fit=crop&w=1650&q=80',
+  address: ' 39 Maiden Ln, London WC2E 7LJ',
+  telephone: '020 7240 8309',
+  category: 'Food nearing expiration',
+  description: 'Five Pepperoni Pizzas',
+  location: [-0.12282, 51.51104]
+}, {
+  company: 'The Clink',
+  contactname: 'Jon Smith',
+  image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a5e4cac8bcaf69ffaf5d3b1c2b063e4&auto=format&fit=crop&w=1650&q=80',
+  address: 'HMP Brixton, Jebb Ave, London SW2 5XF',
+  telephone: '020 8678 9007',
+  category: 'Food nearing expiration',
+  description: 'Selection of salads garnished with french dressing',
+  location: [-0.12471, 51.45196]
+}, {
+  company: 'Ottolenghi',
+  contactname: 'Ho Min Lee',
+  image: 'https://images.unsplash.com/photo-1508900173264-bb171fa617e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=31c6c32bd82ebecec16401d0757e8de5&auto=format&fit=crop&w=1650&q=80',
+  address: '21-22 Warwick Street London W1B 5NE',
+  telephone: '020 7494 9584',
+  category: 'Food nearing expiration',
+  description: '10kgs of beans',
+  location: [-0.13841, 51.51174]
+}, {
+  company: 'Jhenn of the Vegan Ronin',
+  contactname: 'Christian Vert',
+  image: 'https://images.unsplash.com/photo-1467020323552-36f7bf0e30e6?ixlib=rb-0.3.5&s=b3885f1c152f7357fa0a7393bb8f6112&auto=format&fit=crop&w=1650&q=80',
+  address: '21-29 Warwick Street London W1B 5NC',
+  telephone: '020 7454 9884',
+  category: 'Food nearing expiration',
+  description: '5kg of Tomatoes and onions',
+  location: [-0.13841, 51.51874]
 }];
+
 
 
 mongoose.connect(dbURI, { useMongoClient: true })
