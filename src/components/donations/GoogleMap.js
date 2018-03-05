@@ -30,7 +30,8 @@ class GoogleMap extends React.Component {
           icon: 'https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png'
         });
         var infowindow =  new google.maps.InfoWindow({
-          content: donation.address
+          content: donation.address,
+          description: donation.description
         });
         marker.addListener('mouseover', function() {
           infowindow.open(this.map, this);
