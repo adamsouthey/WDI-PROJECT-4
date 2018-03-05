@@ -34,15 +34,11 @@ class CharityShow extends React.Component {
 
   render() {
     let type = null;
-
     if (Auth.getPayload()) type = Auth.getPayload().type;
 
     return (
       <div className="container">
         <div className="row">
-          { type === 'charity' && <h5>CHARITY SHOW PAGE</h5>, <br />, <p>Displaying Charity User Current Location and Food Vendors nearby with food available for pickup</p> }
-
-
           <div className="col-md-6 charityShowProfile">
             <h4><strong> User Profile</strong></h4>
             <h4> {this.state.user.firstname}</h4>
@@ -57,9 +53,14 @@ class CharityShow extends React.Component {
           <div className="col-md-6">
             {this.state.user.location && this.state.donations.length &&
           <GoogleMap center={{lat: this.state.user.location[1], lng: this.state.user.location[0]}} donations={this.state.donations}/>}
+            <ul className="charityIcon">
+              { this.state.donations.map((donation, i) =>
+                <li key={i}>
+                  <img src="https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png"/>{ donation.address }
+                </li>
+              )}
+            </ul>
           </div>
-
-
         </div>
       </div>
     );

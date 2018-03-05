@@ -34,10 +34,8 @@ class DonationsIndex extends React.Component {
         <br />
         <div className="row">
           <div className="page-banner col-md-12">
-            {type === 'vendor' &&   <h5> If you would like to make a donation, please click the button below and fill out the donation form.
-                If you would like to search for existing donations, please find them below. </h5> }
-            {type === 'charity' &&   <h5> Please find existing donations made by food vendors below </h5> }
-
+            {type === 'vendor' &&   <h4>Please make your donation below.</h4> }
+            {type === 'charity' &&   <h4> Please find existing donations made by food retailers below </h4> }
             <hr />
             { type === 'vendor' && <Link to="/donations/new" className="main-button">
               <button className="main-button">

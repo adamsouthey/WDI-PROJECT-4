@@ -64,6 +64,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
               />
               {errors.image && <p className="error"><small>{errors.image}</small></p>}
             </div>
+            <br />
             <div className="form-group">
               <GoogleAutocomplete  className="positionFix" setLatLng={setLatLng}/>
 

@@ -5,7 +5,6 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-family: 'Oxygen', sans-serif;
   background: #fff;
   color: black;
@@ -34,10 +33,15 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      opacity: 0.8;
+      opacity: 0.6;
     }
 }
-
+.charityIcon{
+margin: 0 auto;
+text-align: justify;
+list-style-type: none;
+margin-left: 50px;
+}
 .google-map {
   width: 450px;
   height: 300px;
@@ -121,6 +125,18 @@ h2 {
 }
 h4{
    font-style: italic;
+   font-size: 20px;
+
+   &.indexText{
+    text-align: center;
+    font-style: normal;
+    font-size: 22px;
+    opacity: 0.5;
+    width: 50%;
+    color: #52D017;
+    font-weight: bold;
+    margin: 0 auto;
+   }
 }
 
 hr {
@@ -294,9 +310,9 @@ i {
 
 //Error Messages
 p.error{
-color: #E42217;
+color: lighten(#E42217, 10%);
 font-weight: bold;
-font-size: 14px;
+font-size: 15px;
 position: absolute;
 text-align: center;
 // font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -642,11 +658,9 @@ $color : #f26522;
   margin-top: 20px;
   font-size: 12px;
 
-
-
   a {
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     display: inline-block;
     border: $thick solid transparent;
     position: relative;
@@ -1132,5 +1146,5 @@ $blue: lighten(rgb(4,159,217), 5%);
 }
 
 .text {
-  padding: 3px;
+  padding: 6px;
 }
