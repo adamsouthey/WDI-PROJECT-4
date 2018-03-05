@@ -1160,3 +1160,20 @@ $blue: lighten(rgb(4,159,217), 5%);
 .text {
   padding: 6px;
 }
+
+.user {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.imageKey{
+  width: 400px;
+  height: 50px;
+  margin-left:90px;
+}

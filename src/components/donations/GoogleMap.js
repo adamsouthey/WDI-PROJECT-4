@@ -9,7 +9,7 @@ class GoogleMap extends React.Component {
     console.log(this.props.donations);
     this.map = new google.maps.Map(this.mapCanvas, {
       center: this.props.center || { lat: 51.51, lng: -0.09 },
-      zoom: 14,
+      zoom: 12,
       styles: mapStyle
 
     });
