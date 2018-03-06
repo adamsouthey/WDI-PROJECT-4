@@ -23,7 +23,7 @@ class DonationsContact extends React.Component {
               This could be food nearing its sell-by date in local stores, spare home-grown vegetables or unsold food.
             </p>
           </div>
-      
+
           <div className="col-md-6">
             <strong><h4> WRAP estimates that 1.9m tons of food is wasted by the food industry every year in the UK alone.
             </h4></strong>
@@ -54,7 +54,5 @@ class DonationsContact extends React.Component {
     );
   }
 }
-
-
 
 export default DonationsContact;
