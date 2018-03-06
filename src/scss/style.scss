@@ -17,12 +17,7 @@ body {
     left: 0px;
     top: 200px;
     z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
-    // background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
-    // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    // background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-    // background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
-    // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
-    // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     .stretch {
       background-size: cover;
@@ -673,12 +668,12 @@ $color : #f26522;
 
 
 .portfolio-experiment {
-  margin-top: 20px;
+  margin-top: 14px;
   font-size: 12px;
 
   a {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     display: inline-block;
     border: $thick solid transparent;
     position: relative;
@@ -1190,4 +1185,28 @@ background: -webkit-linear-gradient(transparent, transparent),
 background: -o-linear-gradient(transparent, transparent);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #52D017; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #52D017; }
 }

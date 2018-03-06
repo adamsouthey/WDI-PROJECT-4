@@ -29,7 +29,7 @@ const donationData = [{
   address: '79 Vallance Rd, London E1 5BS',
   telephone: '020 7247 6228',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Random selection of donuts',
   location: [-0.0644, 51.5215]
 }, {
   company: 'The Golden Hind',
@@ -38,7 +38,7 @@ const donationData = [{
   address: '71a-73 Marylebone Ln, Marylebone, London W1U 2PN',
   telephone: '020 7486 3644',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Pan fried sea bass with dauphinoise potatoes',
   location: [-0.1510, 51.5180]
 }, {
   company: 'MotherMash',
@@ -47,7 +47,7 @@ const donationData = [{
   address: '26 Ganton St, Soho, London W1F 7QZ',
   telephone: '020 7494 9644',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Selection of loaves',
   location: [-0.13940, 51.51293]
 }, {
   company: 'DUCKSOUP',
@@ -56,7 +56,7 @@ const donationData = [{
   address: ' 41 Dean St, Soho, London W1D 4PY',
   telephone: '020 7287 4599',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Sweet and sour chicken with deep fried shrimp, calamari and an orange juice',
   location: [-0.13209, 51.51334]
 }, {
   company: 'Tommis Burger Joint',
@@ -65,7 +65,7 @@ const donationData = [{
   address: ' 342 Kings Rd, Chelsea, London SW3 5UR',
   telephone: '020 7349 0691',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: '10 lamb burgers marinated in barbecue sauce',
   location: [-0.17456, 51.48534]
 }, {
   company: 'Sarastro',
@@ -74,7 +74,7 @@ const donationData = [{
   address: '126 Drury Ln, London WC2B 5SU',
   telephone: ' 020 7836 0101',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Selection of salads, olives and breads',
   location: [-0.11916, 51.51356]
 }, {
   company: 'Joe and the Juice',
@@ -83,7 +83,7 @@ const donationData = [{
   address: '113 Cannon St, London EC4N 5AR',
   telephone: '07341018433',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: '20 Yorkshire Pies',
   location: [-0.08948, 51.51162]
 }, {
   company: 'Hutong',
@@ -92,7 +92,7 @@ const donationData = [{
   address: ' 33, The Shard, 31 St Thomas St, London SE1 9RY',
   telephone: '020 3011 1257',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'An assortment of 30 spring rolls',
   location: [-0.08794, 51.50492]
 }, {
   company: 'Bocca di Lupo',
@@ -101,7 +101,7 @@ const donationData = [{
   address: '12 Archer St, Soho, London W1D 7BB',
   telephone: '020 7734 2223',
   category: 'Food nearing expiration',
-  description: 'Collect donations at allocated time from supermarket (further details will be provided, please contact us)',
+  description: 'Deep pan pepperoni pizza',
   location: [-0.13401, 51.51167]
 }, {
   company: 'Franco Manca',
