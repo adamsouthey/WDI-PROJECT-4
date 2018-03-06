@@ -52,11 +52,12 @@ class DonationsShow extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <h3>{this.state.donation.company}</h3>
-                <h4>{this.state.donation.contactname}</h4>
-                <h4>{this.state.donation.address}</h4>
-                <h4>{this.state.donation.telephone}</h4>
-                <h4>{this.state.donation.category}</h4>
-                <em>{this.state.donation.description}</em>
+                <h4>{this.state.donation.description}</h4>
+                <h5>{this.state.donation.address}</h5>
+                <h5>{this.state.donation.contactname}</h5>
+                <h5>{this.state.donation.telephone}</h5>
+                <h5>{this.state.donation.category}</h5>
+
               </div>
 
               <div className="col-md-6 buttonShow">
