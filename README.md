@@ -60,6 +60,7 @@ For this project I have used the following APIs:
 My original wireframes are similar to how the project actually turned out:  
 
 Wireframes:
+
 <img width="685" alt="screenshot 2018-03-20 12 39 32" src="https://user-images.githubusercontent.com/32818032/37654955-c44f20ca-2c3b-11e8-9071-4f98dd61b3b0.png">
 
 
