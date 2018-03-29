@@ -6,6 +6,22 @@
 
 Uneaten Matters attempts to connect charities with local businesses and food retailers so surplus food can be shared with those less fortunate. 
 
+### Project Brief
+
+Your app must:
+
+- Use Mongo, Express and Node to build an API and a React front-end app that consumes it
+- Create an API using at least 2 related models, one of which should be a user
+- Include all major CRUD functions in a RESTful API for at least one of those model
+- API must include tests for the authentication and resful routes
+- Consume your own API by making your front-end app with React
+- Add authentication to your API to restrict access to appropriate users
+- Layout and style your front-end with clean & well-formatted CSS
+- Deploy your application online so it's publically accessible
+- A working API hosted somewhere on the internet
+- A link to your hosted working app in the URL section of your Github repo
+- A readme.md file
+
 [**Heroku**](https://hidden-peak-69323.herokuapp.com/)
 
 [**GitHub Repository**](https://github.com/adamsouthey/WDI-PROJECT-4)   
