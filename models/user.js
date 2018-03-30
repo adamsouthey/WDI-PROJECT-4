@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   type: { type: String, required: 'Please select an option.' },
   address: { type: String},
   location: {
-    type: [Number], // [<lng>, <lat>]
+    type: [Number], 
     index: '2dsphere'
   }
 
