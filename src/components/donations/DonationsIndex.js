@@ -29,7 +29,6 @@ class DonationsIndex extends React.Component {
 
     return (
       <div className="container">
-        {/* <BackButton history={this.props.history} /> */}
         <br />
         <div className="row">
           <div className="page-banner col-md-12">
