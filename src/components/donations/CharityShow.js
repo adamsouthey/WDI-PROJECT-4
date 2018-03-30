@@ -33,15 +33,6 @@ class CharityShow extends React.Component {
       .catch(err => console.log(err));
   }
 
-  // componentDidMount(){
-  //   marker.id = donation.id;
-  //
-  //   .addListener(marker, 'click', () => {
-  //     this.props.history.push(`/donations/${marker.id}`);
-  //   });
-  // }
-
-
   render() {
     let type = null;
     if (Auth.getPayload()) type = Auth.getPayload().type;

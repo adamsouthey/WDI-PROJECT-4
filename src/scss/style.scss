@@ -132,7 +132,7 @@ h2 {
 }
 h4{
    font-style: italic;
-   font-size: 20px;
+   font-size: 2vw;
 
    &.indexText{
     text-align: center;
@@ -230,15 +230,13 @@ select.form-control{
   }
 }
 button .main-button .standard-button{
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   color: white;
-  padding: 20px 10px;
+  padding: 10px 10px;
   color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
   border-radius: 4px;
-  font-weight: 600;
-  // width: 80%;
+  font-weight: 200;
   outline: none;
-  // margin: 10px;
   font-family: 'Oxygen', sans-serif;
   text-align: center;
   margin: 0 auto;
@@ -247,10 +245,6 @@ button .main-button .standard-button{
     margin-right: 5px;
   }
 }
-// .image-filestack{
-//   width: 100%;
-// }
-
 .imagePreview{
   text-align: center;
   margin: 20px;
@@ -295,12 +289,13 @@ button .main-button .standard-button{
   border-radius: 4px;
   font-weight: 600;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 1.5vw;
   outline: none;
   margin: 10px;
   font-family: 'Oxygen', sans-serif;
   margin: 0 auto;
-  width: 150px;
+  width: 12%;
+  height: 30%;
 
 
   &:hover, &:focus {
@@ -1183,8 +1178,8 @@ $blue: lighten(rgb(4,159,217), 5%);
 
 .user {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 25%;
+  height: 25%;
   border-radius: 50%;
 
   background-repeat: no-repeat;
