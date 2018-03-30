@@ -1,7 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
-// import BackButton from '../utility/BackButton';
 import Auth from '../../lib/Auth';
 
 class DonationsIndex extends React.Component {
