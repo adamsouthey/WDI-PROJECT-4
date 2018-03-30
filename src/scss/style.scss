@@ -137,7 +137,7 @@ h4{
    &.indexText{
     text-align: center;
     font-style: normal;
-    font-size: 22px;
+    font-size: 2vw;
     opacity: 0.5;
     width: 50%;
     color: #52D017;
@@ -564,6 +564,17 @@ h2 {
   width: 100%;
   font-size: 26px;
 }
+
+h3{
+  width: 100%;
+  font-size: 1.8vw;
+}
+
+p{
+  width: 100%;
+  font-size: 1vw;
+}
+
 
 label {
   display: block;
