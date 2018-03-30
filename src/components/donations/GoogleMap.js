@@ -11,7 +11,6 @@ class GoogleMap extends React.Component {
       center: this.props.center || { lat: 51.51, lng: -0.09 },
       zoom: 12,
       styles: mapStyle
-
     });
     var image = 'http://www.codeshare.co.uk/images/blue-pin.png';
     this.marker = new google.maps.Marker({
@@ -21,8 +20,6 @@ class GoogleMap extends React.Component {
     });
     if(this.props.donations){
       this.props.donations.forEach((donation) => {
-
-        // console.log('in here', donation.address);
         const marker = new google.maps.Marker({
           map: this.map,
           position: { lat: donation.location[1], lng: donation.location[0] },
@@ -42,13 +39,11 @@ class GoogleMap extends React.Component {
 
 
         marker.id = donation.id;
-
         google.maps.event.addListener(marker, 'click', () => {
           this.props.history.push(`/donations/${marker.id}`);
         });
       });
     }
-
   }
 
   componentWillUnmount() {
@@ -58,7 +53,6 @@ class GoogleMap extends React.Component {
   }
 
   render() {
-
     return (
       <div className='google-map' ref={element => this.mapCanvas = element}>Google Map goes here...</div>
     );

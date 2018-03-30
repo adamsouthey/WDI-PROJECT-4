@@ -31,6 +31,13 @@ body {
       opacity: 0.7;
     }
 }
+
+.welcomeTitle{
+  font-size: 5vw;
+}
+.welcomeSubTitle{
+  font-size: 2vw;
+}
 .vendorIcon{
 margin: 0 auto;
 text-align: justify;
@@ -71,6 +78,7 @@ header {
   height: 200px;
   position: relative;
 
+
   nav {
     position: absolute;
     top: 0;
@@ -81,6 +89,7 @@ header {
 a {
   text-decoration: none;
   color: inherit;
+
   font-family: 'Oxygen', sans-serif;
 	font-size: 80px;
 	line-height: 10px;
@@ -110,15 +119,15 @@ margin-top: -20px;
 h2 {
   margin: -18px 0 0 6px;
   font-size: 14px;
-  letter-spacing: 12px;
+  letter-spacing: 8px;
     color:black;
 
 
   span {
-    font-size: 22px;
+    font-size: 2.5vw;
     font-weight: bold;
     color:#52D017;
-    letter-spacing: 20px;
+    letter-spacing: 5px;
   }
 }
 h4{
@@ -673,7 +682,7 @@ $color : #f26522;
 
   a {
     color: black;
-    font-size: 14px;
+    font-size: 1.5vw;
     display: inline-block;
     border: $thick solid transparent;
     position: relative;
@@ -1185,28 +1194,4 @@ background: -webkit-linear-gradient(transparent, transparent),
 background: -o-linear-gradient(transparent, transparent);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-}
-
-
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #52D017; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #52D017; }
 }

@@ -20,8 +20,8 @@ class App extends React.Component {
         <div>
           <header>
             <div className="container">
-              <h1 className="typewriter"><Link to="/">Uneaten Matters</Link></h1>
-              <h2>Donate your unwanted <span>food</span></h2>
+              <h1><Link className="welcomeTitle" to="/">Uneaten Matters</Link></h1>
+              <h2 className="welcomeSubTitle">Donate your unwanted <span>food</span></h2>
               <Navbar />
               <hr />
             </div>

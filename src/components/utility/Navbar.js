@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 
-import { LinkContainer } from 'react-router-bootstrap';
-
 
 const Navbar = ({ history }) => {
   function logout(e) {
@@ -16,7 +14,6 @@ const Navbar = ({ history }) => {
   if (Auth.getPayload()) type = Auth.getPayload().type;
 
   return(
-
     <section className="portfolio-experiment">
       <Link to='/'>
         <span className="text">Home</span>
@@ -27,13 +24,6 @@ const Navbar = ({ history }) => {
       </Link>
       <Link to='/about'>
         <span className="text">About</span>
-        <span className="line -right"></span>
-        <span className="line -top"></span>
-        <span className="line -left"></span>
-        <span className="line -bottom"></span>
-      </Link>
-      <Link to='/contact'>
-        <span className="text">Contact</span>
         <span className="line -right"></span>
         <span className="line -top"></span>
         <span className="line -left"></span>
