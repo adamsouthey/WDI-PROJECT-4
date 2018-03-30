@@ -46,7 +46,7 @@ class DonationsShow extends React.Component {
             </div>
             <div className="col-md-6">
               {this.state.donation.location &&
-                <GoogleMap  center={{lat: this.state.donation.location[1], lng: this.state.donation.location[0]}}/>}
+                <GoogleMap   center={{lat: this.state.donation.location[1], lng: this.state.donation.location[0]}} className="imageShow"/>}
             </div>
 
             <div className="row">
