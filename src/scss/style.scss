@@ -63,9 +63,16 @@ body {
 }
 
 .vendorInformation{
-  font-size: 1vw;
+  font-size: 10vw;
 }
-@media screen and (max-width: 338px) {
+@media screen and (max-width: 768px) {
+  .vendorInformation{
+    font-size: 3vw;
+  }
+}
+
+
+@media screen and (max-width: 414px) {
   .vendorInformation{
     font-size: 2vw;
   }
@@ -130,6 +137,22 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 991px) {
+  .imageShow{
+  width: 65vw;
+  height: 40vw;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+  border: solid 2px #52D017;
+
+  box-shadow: inset 0px 0px 7px #CCC;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .imageShow{
   width: 55vw;
@@ -145,6 +168,8 @@ body {
   margin-top: 20px;
   }
 }
+
+
 
 
 .mapAndImageShow{
@@ -407,8 +432,22 @@ button .main-button .standard-button{
 .foodDesc{
   font-size: 1vw;
   margin-left: 18px;
-
 }
+
+@media screen and (max-width: 768px) {
+  h6.foodDesc{
+    font-size: 2vw;
+    margin-left: 34px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .foodDesc{
+    font-size: 1vw;
+    margin-left: 18px;
+  }
+}
+
 
 .main-button {
   background: #52D017;
@@ -860,11 +899,10 @@ $color : #f26522;
 
 .portfolio-experiment {
   margin-top: 14px;
-  font-size: 12px;
 
   a {
     color: black;
-    font-size: 1.5vw;
+    font-size: 1vw;
     display: inline-block;
     border: $thick solid transparent;
     position: relative;
@@ -873,7 +911,6 @@ $color : #f26522;
 
     .text {
       padding: 1 1.2em;
-
       font-family: 'Oxygen', sans-serif;
       transform: translate3d(1,$pad,1);
       display: block;
@@ -887,17 +924,26 @@ $color : #f26522;
       bottom: -$thick;
       left: $extra;
       right: $extra;
-
       background: #52D017;
-      // z-index: -1;
       transition:
       transform 0.8s cubic-bezier(0.5,0,.1,1) 0.9s,
       right 0.2s cubic-bezier(.04,.48,0,1) 0.9s,
       left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
       transform-origin: left;
     }
-
   }
+
+  @media screen and (max-width: 768px) {
+    a .text {
+      font-size: 2vw;
+  }
+}
+
+  @media screen and (max-width: 414px) {
+    a .text {
+      font-size: 2vw;
+  }
+}
 
   .navBarFloatRight{
     float: right;
@@ -1393,4 +1439,28 @@ $blue: lighten(rgb(4,159,217), 5%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+  .indexWelcome{
+    color:	#D5AD6D; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .indexWelcome{
+    color:	#D5AD6D; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3vw;
+}
 }
