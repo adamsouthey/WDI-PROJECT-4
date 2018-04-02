@@ -342,7 +342,7 @@ button .main-button .standard-button{
   margin: 10px;
   font-family: 'Oxygen', sans-serif;
   margin: 0 auto;
-  width: 30%;
+  width: 100%;
   height: 50%;
   &:hover, &:focus {
     color: white;
@@ -354,7 +354,6 @@ button .main-button .standard-button{
 @media screen and (max-width: 768px) {
   .main-button {
     background: #52D017;
-    padding: 6px;
     margin-top: 10px;
     color: white;
     color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
@@ -366,8 +365,28 @@ button .main-button .standard-button{
     margin: 10px;
     font-family: 'Oxygen', sans-serif;
     margin: 0 auto;
-    width: 30%;
+    width: 100%;
     height: 70%;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .main-button {
+    background: #52D017;
+    margin-top: 10px;
+    color: white;
+    color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 2vw;
+    outline: none;
+    margin: 10px;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 16px;
   }
 }
 .save-button {
@@ -395,7 +414,7 @@ i {
 p.error{
   color: lighten(#E42217, 10%);
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 1.4vw;
   position: absolute;
   float: left;
   font-family: 'Oxygen', sans-serif;
@@ -484,11 +503,10 @@ $diffRatio: ($contW - $imgW) / $contW;
 button {
   display: block;
   margin: 0 auto;
-  // width: $inputW;
   height: $btnH;
   border-radius: 10px;
   color: #fff;
-  font-size: 15px;
+  font-size: 2vw;
   cursor: pointer;
 }
 
@@ -1277,4 +1295,5 @@ $blue: lighten(rgb(4,159,217), 5%);
   background: -o-linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5vw;
 }
