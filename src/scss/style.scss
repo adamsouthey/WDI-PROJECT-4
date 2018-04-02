@@ -50,7 +50,7 @@ body {
     margin: 0 auto;
     text-align: justify;
     list-style-type: none;
-    margin-left: 220px;
+    margin-left: 110px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -58,7 +58,7 @@ body {
     margin: 0 auto;
     text-align: justify;
     list-style-type: none;
-    margin-left: 70px;
+    margin-left: 40px;
   }
 }
 
@@ -88,8 +88,8 @@ body {
 
 @media screen and (max-width: 991px) {
   .google-map {
-    width: 35vw;
-    height: 20vw;
+    width: 65vw;
+    height: 40vw;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
@@ -104,8 +104,8 @@ body {
 
 @media screen and (max-width: 414px) {
   .google-map {
-    width: 55vw;
-    height: 35vw;
+    width: 70vw;
+    height: 45vw;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
