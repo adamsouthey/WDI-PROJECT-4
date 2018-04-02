@@ -77,7 +77,6 @@ body {
 }
 
 header {
-  height: 200px;
   position: relative;
 
 
@@ -193,10 +192,7 @@ hr {
 .form-group{
   margin: 0 auto;
   width: 40%;
-
-
   font-size: 12px;
-  // font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-family: 'Oxygen', sans-serif;
 
   & p.form-group{
@@ -218,6 +214,28 @@ hr {
   text-align-last: center;
   position: relative;
   height: 32px;
+
+}
+
+@media screen and (max-width: 320px) {
+  .form-control{
+    font-family: 'Oxygen', sans-serif;
+    margin-top: 18px;
+    text-align-last: center;
+    position: relative;
+  font-size:3vw;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .form-group{
+    margin: 0 auto;
+    width: 40%;
+
+    font-size: 12px;
+    font-family: 'Oxygen', sans-serif;
+  }
 }
 
 
@@ -377,10 +395,9 @@ i {
 p.error{
   color: lighten(#E42217, 10%);
   font-weight: bold;
-  font-size: 15px;
+  font-size: 2vw;
   position: absolute;
   float: left;
-  // font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-family: 'Oxygen', sans-serif;
 }
 
