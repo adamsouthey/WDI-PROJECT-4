@@ -61,7 +61,7 @@ class CharityShow extends React.Component {
 
                 <li key={i}>
                   <Link className="vendorImageClick" to={`/donations/${donation.id}`}>
-                    <img src="https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png"/><strong>{ donation.address }</strong><br/>
+                    <img src="https://cdn3.iconfinder.com/data/icons/living/24/249_eat_restaurant_dinner-32.png"/><strong className="vendorInformation">{ donation.address }</strong><br/>
                     <h6 className="foodDesc">{donation.description}</h6>
                   </Link>
                 </li>
