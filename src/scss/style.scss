@@ -40,7 +40,7 @@ body {
   margin: 0 auto;
   text-align: justify;
   list-style-type: none;
-  margin-left: 30px;
+  margin-left: 50px;
   & em{
     font-size: 8vw;
   }
@@ -63,7 +63,8 @@ body {
 }
 
 .vendorInformation{
-  font-size: 10vw;
+  font-size: 1vw;
+
 }
 @media screen and (max-width: 768px) {
   .vendorInformation{
@@ -111,8 +112,8 @@ body {
 
 @media screen and (max-width: 414px) {
   .google-map {
-    width: 70vw;
-    height: 45vw;
+    width: 65vw;
+    height: 40vw;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
@@ -155,8 +156,8 @@ body {
 
 @media screen and (max-width: 414px) {
   .imageShow{
-  width: 55vw;
-  height: 35vw;
+  width: 65vw;
+  height: 40vw;
   -moz-box-shadow:    inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow:         inset 0 0 10px #000000;
