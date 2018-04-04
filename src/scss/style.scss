@@ -304,7 +304,6 @@ hr {
 
   & p.form-group{
     text-align: center;
-
   }
 
   & a{
@@ -314,6 +313,8 @@ hr {
     font-family: 'Oxygen', sans-serif;
   }
 }
+
+
 
 .form-control{
   font-family: 'Oxygen', sans-serif;
@@ -490,6 +491,25 @@ button .main-button .standard-button{
     height: 30px;
   }
 }
+@media screen and (max-width: 768px) {
+  .additionalButton {
+    background: #52D017;
+    margin-top: 10px;
+    color: white;
+    color: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 2vw;
+    outline: none;
+    margin: 10px;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+  }
+}
+
 
 
 @media screen and (max-width: 375px) {
@@ -506,10 +526,12 @@ button .main-button .standard-button{
     margin: 10px;
     font-family: 'Oxygen', sans-serif;
     margin: 0 auto;
-    width: 40%;
+    width: 100%;
     height: 16px;
   }
 }
+
+
 .save-button {
   background: #378B2E;
   border: 1px solid lighten(#52D017, 10%);

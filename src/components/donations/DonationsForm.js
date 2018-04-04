@@ -51,8 +51,8 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
             <ReactFilestack
               apikey="AI85glpMjQZuhWJFfvwtsz"
               buttonText="Upload a photo"
-              buttonClass="main-button"
-              className="form-group"
+              buttonClass="additionalButton"
+              className="additionalButton"
               placeholder="Upload Image"
               id="image"
               name="image"
@@ -127,7 +127,7 @@ const DonationsForm = ({ history, handleSubmit, handleChange, handleImageUpload,
               <br />
               <br />
               <br />
-              <button className="main-button">Save</button>
+              <button className="additionalButton">Save</button>
             </div>
           </form>
 
