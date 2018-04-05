@@ -557,13 +557,32 @@ i {
 p.error{
   color: lighten(#E42217, 10%);
   font-weight: bold;
-  font-size: 1.4vw;
+  font-size: 1vw;
   position: absolute;
   float: left;
   font-family: 'Oxygen', sans-serif;
 }
+@media screen and (max-width: 768px) {
+  p.error{
+    color: lighten(#E42217, 10%);
+    font-weight: bold;
+    font-size: 1.6vw;
+    position: absolute;
+    float: left;
+    font-family: 'Oxygen', sans-serif;
+  }
+}
 
-
+@media screen and (max-width: 414px) {
+p.error{
+  color: lighten(#E42217, 10%);
+  font-weight: bold;
+  font-size:2.4vw;
+  position: absolute;
+  float: left;
+  font-family: 'Oxygen', sans-serif;
+  }
+}
 
 
 // Registration, Login Forms

@@ -9,7 +9,7 @@ import DonationsForm from '../../../src/components/donations/DonationsForm';
 
 
 describe('DonationsForm tests', () => {
-  it('should render seven input fields, one image input field and one select', done => {
+  it('should render five input fields, one image input field and one select', done => {
     const props = {
       donation: {
         company: '',
